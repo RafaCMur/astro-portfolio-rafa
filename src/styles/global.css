@@ -1,0 +1,74 @@
+/* Global Styles for Portfolio */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General colors and fonts */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0a192f;
+  color: #ccd6f6;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Main container */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header and Footer */
+header,
+footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Links */
+a {
+  color: #64ffda;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header Styles */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(10, 25, 47, 0.9);
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  color: #64ffda;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}

@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import "../styles/global.css";
 
 const { title } = Astro.props;
 ---
@@ -16,6 +17,7 @@ const { title } = Astro.props;
     <Header />
 
     <main>
+      <!-- The content of the page will be rendered here. Go to BaseLayout.astro -->
       <slot />
     </main>
 
