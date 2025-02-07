@@ -1,4 +1,5 @@
 /* Global Styles for Portfolio */
+@import url("mini-bootstrap.css");
 
 /* CSS variables */
 
@@ -41,6 +42,16 @@ header,
 footer {
   text-align: center;
   padding: 20px 0;
+}
+
+/* Profile Image */
+.profile-image {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
 }
 
 /* Links */
@@ -175,4 +186,63 @@ header nav ul li a:hover {
 
 .card-button-secondary:hover {
   background-color: #1f4068;
+}
+
+/* Work Experience Styles */
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.job {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.job-left .job-image {
+  order: 1;
+}
+
+.job-left .job-content {
+  order: 2;
+}
+
+.job-right .job-image {
+  order: 2;
+}
+
+.job-right .job-content {
+  order: 1;
+}
+
+.job-image {
+  width: 15rem;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
+
+.job-title a {
+  color: #64ffda;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.job-description {
+  color: #ccd6f6;
+  margin: 0.5rem 0;
+}
+
+.job-tech-icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.job-tech-icons img {
+  width: 30px;
+  height: 30px;
 }
