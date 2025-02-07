@@ -46,3 +46,12 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Astro Icons
+
+https://www.youtube.com/watch?v=Q783GL2ydtg
+https://www.astroicon.dev/getting-started/
+
+To use astro icons there need to be an icons folder located below src. Then use it like this:
+
+<Icon name="github" size={24} />

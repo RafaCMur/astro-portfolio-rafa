@@ -143,11 +143,14 @@ header nav ul li a:hover {
 .card-button-primary,
 .card-button-secondary {
   text-align: center;
-  padding: 0.7rem 1rem;
+  padding: 0.6rem 1rem;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.2s;
   border-radius: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .card-button-primary {
@@ -161,6 +164,15 @@ header nav ul li a:hover {
   border-color: var(--primary-color);
 }
 
-.card-button:hover {
-  background-color: #52c7b8;
+.card-button-primary:hover,
+.card-button-secondary:hover {
+  text-decoration: none;
+}
+
+.card-button-primary:hover {
+  background-color: #45a29e;
+}
+
+.card-button-secondary:hover {
+  background-color: #1f4068;
 }
