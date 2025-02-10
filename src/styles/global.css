@@ -28,7 +28,6 @@ body {
   background-color: var(--background-dark);
   color: var(--white-color);
   line-height: 1.6;
-  padding: 20px;
 }
 
 /* Main container */
@@ -77,6 +76,7 @@ header {
   top: 0;
   left: 0;
   backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
 header nav ul {

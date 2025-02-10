@@ -3,12 +3,12 @@
   * A minimalistic CSS framework for modern web development.
   */
 
-.flex-container {
+.flex-row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
-.flex-row {
+.flex-col {
   display: flex;
   flex-direction: column;
 }
@@ -21,6 +21,12 @@
 }
 .gap-2 {
   gap: 2rem;
+}
+.gap-3 {
+  gap: 3rem;
+}
+.gap-4 {
+  gap: 4rem;
 }
 .gap-5 {
   gap: 5rem;
