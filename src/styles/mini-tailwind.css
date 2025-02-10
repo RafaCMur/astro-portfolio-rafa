@@ -1,15 +1,29 @@
+/**
+  * Mini Tailwind CSS
+  * A minimalistic CSS framework for modern web development.
+  */
+
 .flex-container {
   display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  align-items: center;
+  flex-direction: column;
+}
 
-  .flex-col {
-    flex-direction: column;
-  }
-  .flex-row {
-    flex-direction: row;
-  }
+.flex-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+.gap-1 {
+  gap: 1rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+.gap-5 {
+  gap: 5rem;
 }
 
 .w-100 {

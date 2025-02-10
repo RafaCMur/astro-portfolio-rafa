@@ -1,18 +1,55 @@
 ---
-
+import { Icon } from "astro-icon/components";
 ---
 
 <section id="education">
-  <h2>Education</h2>
+  <div class="flex-container flex-row gap-2">
+    <div>
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <p><strong>Software Engineer</strong></p>
+          <p>University of Extremadura (Sep 2019 - Jul 2023)</p>
+        </li>
+        <li>
+          <p><strong>Erasmus exchange student</strong></p>
+          <p>Høgskulen på Vestlandet (Aug 2021 - Jun 2022)</p>
+        </li>
+      </ul>
+    </div>
 
-  <ul>
-    <li>
-      <p><strong>Software Engineer</strong></p>
-      <p>University of Extremadura (Sep 2019 - Jul 2023)</p>
-    </li>
-    <li>
-      <p><strong>Erasmus exchange student</strong></p>
-      <p>Høgskulen på Vestlandet (Aug 2021 - Jun 2022)</p>
-    </li>
-  </ul>
+    <div>
+      <h2>Courses</h2>
+      <ul>
+        <li>
+          <strong>Full-Stack Web Development</strong> - Online Platform (Completion
+          Year)
+        </li>
+        <li>
+          <strong>Modern React with Redux</strong> - Udemy (Completion Year)
+        </li>
+        <li>
+          <strong>JavaScript Algorithms and Data Structures</strong> - FreeCodeCamp
+          (Completion Year)
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h2>Tech stack</h2>
+    <div class="flex-container flex-col gap-5">
+      <Icon name="html5-icon" width="2rem" height="2rem" />
+      <Icon name="css3-icon" width="2rem" height="2rem" />
+      <Icon name="javascript-icon" width="2rem" height="2rem" />
+      <Icon name="typescript-icon" width="2rem" height="2rem" />
+      <Icon name="react-icon" width="2rem" height="2rem" />
+      <Icon name="python-icon" width="2rem" height="2rem" />
+      <Icon name="nodejs-icon" width="2rem" height="2rem" />
+      <Icon name="npm-icon" width="2rem" height="2rem" />
+      <Icon name="git-icon" width="2rem" height="2rem" />
+      <Icon name="jira-icon" width="2rem" height="2rem" />
+    </div>
+    <!-- Estas imagenes han sido descargadas de https://simpleicons.org/ -->
+  </div>
 </section>
