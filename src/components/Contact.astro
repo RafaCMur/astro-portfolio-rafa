@@ -32,19 +32,65 @@ import { LINKEDIN_URL } from "../consts";
     </div>
 
     <div class="contact-form">
-      <form class="flex-col gap-1">
-        <div class="flex-row gap-1">
+      <form class="flex-col gap-1 align-center">
+        <div class="flex-row gap-1 w-100">
           <input type="text" placeholder="Name" class="input-field" />
           <input type="email" placeholder="Email" class="input-field" />
         </div>
-        <input
-          type="text"
-          placeholder="Subject"
-          class="input-field full-width"
-        />
+        <input type="text" placeholder="Subject" class="input-field w-100" />
         <textarea placeholder="Message" class="input-field textarea"></textarea>
-        <button type="submit" class="submit-btn">Send Message</button>
+        <button type="submit" class="button-primary w-50">Send Message</button>
       </form>
     </div>
   </div>
 </section>
+
+<style>
+  .contact-info {
+    flex: 1;
+    min-width: 15rem;
+  }
+
+  .contact-form {
+    flex: 1;
+    min-width: 19rem;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-group {
+    display: flex;
+    gap: 12px;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555c66;
+    border-radius: 0.4rem;
+    background: #161b22;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .input-field::placeholder {
+    font-family: Sora;
+    font-size: 1em;
+  }
+
+  .input-field:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+
+  .textarea {
+    height: 10rem;
+    resize: vertical;
+  }
+
+  @media (max-width: 600px) {
+    .form-group {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+</style>
