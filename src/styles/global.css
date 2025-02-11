@@ -227,53 +227,6 @@ header nav ul li a:hover {
 
 /* Work Experience Styles */
 
-.experience {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.job {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.job-left .job-image {
-  order: 1;
-}
-
-.job-left .job-content {
-  order: 2;
-}
-
-.job-right .job-image {
-  order: 2;
-}
-
-.job-right .job-content {
-  order: 1;
-}
-
-.job-image {
-  width: 15rem;
-  height: auto;
-  object-fit: cover;
-  border-radius: 0.3rem;
-}
-
-.job-title a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-size: 1.5rem;
-}
-
-.job-description {
-  color: #ccd6f6;
-  margin: 0.5rem 0;
-}
-
 .job-tech-icons {
   display: flex;
   gap: 0.5rem;
