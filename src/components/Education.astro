@@ -2,53 +2,94 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<section id="education">
-  <div class="flex-row gap-2">
-    <div>
-      <h2>Education</h2>
-      <ul>
-        <li class="mt-1">
-          <p><strong>Software Engineer</strong></p>
-          <p>University of Extremadura</p>
-          <p>(Sep 2019 - Jul 2023)</p>
-        </li>
-        <li class="mt-1">
-          <p><strong>Erasmus exchange student</strong></p>
-          <p>Høgskulen på Vestlandet</p>
-          <p>(Aug 2021 - Jun 2022)</p>
-        </li>
-      </ul>
+<section id="education-courses-tech">
+  <div class="block-container">
+    <!-- Education Block -->
+    <div class="block">
+      <h2 class="mb-1">Education 🎓</h2>
+      <div class="entry">
+        <p class="title">Software Engineer</p>
+        <p class="subtitle">University of Extremadura</p>
+        <p class="date">(Sep 2019 - Jul 2023)</p>
+      </div>
+      <div class="entry">
+        <p class="title">Erasmus Exchange Student</p>
+        <p class="subtitle">Høgskulen på Vestlandet</p>
+        <p class="date">(Aug 2021 - Jun 2022)</p>
+      </div>
     </div>
 
-    <div>
-      <h2>Courses</h2>
-      <ul class="mt-1">
-        <li>
-          <strong>Full-Stack Web Development</strong> - Online Platform (Completion
-          Year)
-        </li>
-        <li>
-          <strong>Modern React with Redux</strong> - Udemy (Completion Year)
-        </li>
-        <li>
-          <strong>JavaScript Algorithms and Data Structures</strong> - FreeCodeCamp
-          (Completion Year)
-        </li>
-      </ul>
+    <!-- Courses Block -->
+    <div class="block">
+      <h2 class="mb-1">Courses 📚</h2>
+      <div class="entry">
+        <p class="title">Learn React</p>
+        <p class="subtitle">Codecademy (2021)</p>
+      </div>
+      <div class="entry">
+        <p class="title">Machine Learning with Keras</p>
+        <p class="subtitle">IBM (2022)</p>
+      </div>
+      <div class="entry">
+        <p class="title">TypeScript sin fronteras</p>
+        <p class="subtitle">Udemy (2023)</p>
+      </div>
+      <div class="entry">
+        <p class="title">Master en JavaScript</p>
+        <p class="subtitle">Victor Robles (2023)</p>
+      </div>
+    </div>
 
-      <h2 class="mt-2">Tech stack</h2>
-      <div class="flex-row gap-1">
-        <Icon name="html5-icon" width="2rem" height="2rem" />
-        <Icon name="css3-icon" width="2rem" height="2rem" />
-        <Icon name="javascript-icon" width="2rem" height="2rem" />
-        <Icon name="typescript-icon" width="2rem" height="2rem" />
-        <Icon name="react-icon" width="2rem" height="2rem" />
-        <Icon name="python-icon" width="2rem" height="2rem" />
-        <Icon name="nodejs-icon" width="2rem" height="2rem" />
-        <Icon name="npm-icon" width="2rem" height="2rem" />
-        <Icon name="git-icon" width="2rem" height="2rem" />
-        <Icon name="jira-icon" width="2rem" height="2rem" />
+    <!-- Tech Stack Block -->
+    <div class="block">
+      <h2 class="block-title">Tech Stack 🛠️</h2>
+      <div class="tech-icons">
+        <Icon name="html5" size={32} />
+        <Icon name="css3" size={32} />
+        <Icon name="javascript" size={32} />
+        <Icon name="typescript" size={32} />
+        <Icon name="react" size={32} />
+        <Icon name="python" size={32} />
+        <Icon name="nodejs" size={32} />
+        <Icon name="npm" size={32} />
+        <Icon name="git" size={32} />
+        <Icon name="jira" size={32} />
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .block-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .block {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .entry {
+    margin-bottom: 1.5rem;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+  }
+
+  .subtitle,
+  .date {
+    color: #a1a1a1;
+    font-size: 0.9rem;
+  }
+</style>

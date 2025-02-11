@@ -1,5 +1,7 @@
 /* Global Styles for Portfolio */
 @import url("mini-tailwind.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 
 /* CSS variables */
 
@@ -10,6 +12,7 @@
   --background-light: #061838;
   --background-light-transparent: rgba(6, 24, 56, 0.85);
   --white-color: #ccd6f6;
+  --secondary-font: #a1a1a1;
   --font-light: 300;
   --font-medium: 500;
   --font-semi-bold: 600;
@@ -26,10 +29,28 @@
 
 /* General colors and fonts */
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Sora", sans-serif;
   background-color: var(--background-dark);
   color: var(--white-color);
   line-height: 1.6;
+}
+
+/* Heading fonts */
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: var(--font-semi-bold);
 }
 
 /* Main container */
@@ -103,16 +124,69 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Card styles */
+/* Button styles */
 
-.card-container {
+.button-primary,
+.button-secondary {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  border-radius: 0.3rem;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
   justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  cursor: pointer;
 }
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: var(--background-dark);
+}
+
+.button-secondary {
+  background-color: inherit;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+  text-decoration: none;
+}
+
+.button-primary:hover {
+  background-color: var(--primary-color-faded);
+}
+
+.button-secondary:hover {
+  background-color: #1f4068;
+}
+
+/* Text styles */
+
+.small-text {
+  font-size: 0.8rem;
+  color: var(--secondary-font);
+}
+
+.title-text {
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+  font-family: "Montserrat", sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #007cf0, #00dfd8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card styles */
 
 .card {
   background-color: #112240;
@@ -120,8 +194,8 @@ header nav ul li a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s;
-  max-width: 300px;
-  margin: 20px;
+  max-width: 18rem; /* 288px */
+  margin: 1rem;
 }
 
 .card:hover {
@@ -148,48 +222,6 @@ header nav ul li a:hover {
   font-size: 1rem;
   color: #ccd6f6;
   margin-bottom: 1rem;
-}
-
-.card-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.card-button-primary,
-.card-button-secondary {
-  text-align: center;
-  padding: 0.6rem 1rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.2s;
-  border-radius: 0.3rem;
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.card-button-primary {
-  background-color: var(--primary-color);
-  color: var(--background-dark);
-}
-
-.card-button-secondary {
-  background-color: var(--background-light);
-  color: var(--primary-color);
-  border-color: var(--primary-color);
-}
-
-.card-button-primary:hover,
-.card-button-secondary:hover {
-  text-decoration: none;
-}
-
-.card-button-primary:hover {
-  background-color: var(--primary-color-faded);
-}
-
-.card-button-secondary:hover {
-  background-color: #1f4068;
 }
 
 /* Work Experience Styles */

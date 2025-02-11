@@ -1,16 +1,26 @@
 ---
-
+import { Icon } from "astro-icon/components";
 ---
 
 <section id="intro" class="mt-5 mb-10">
   <div class="flex-row w-100 align-center">
     <div class="intro-text">
-      <p>Hi, I'm Rafa 👋</p>
-      <h1>Frontend Developer</h1>
+      <p class="big-text">Hi, I'm Rafa 👋</p>
+      <p class="title-text gradient-text">Frontend Developer</p>
       <p>Who loves creating web apps.</p>
+      <div class="flex-row gap-1 mt-1">
+        <a class="button-secondary">
+          <span>Resume</span>
+          <Icon name="resume" size={24} />
+        </a>
+        <a class="button-primary" href="#about">
+          <span>About me</span>
+          <Icon name="arrow-right2" size={24} />
+        </a>
+      </div>
     </div>
     <img
-      src="rafael-frontend-developer.jpg"
+      src="https://fakeimg.pl/400x400/cccccc/0a99ff"
       alt="Rafael Frontend Developer"
       class="profile-image"
     />
