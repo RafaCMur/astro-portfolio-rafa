@@ -4,9 +4,11 @@
 /* CSS variables */
 
 :root {
-  --primary-color: #64ffda;
-  --background-dark: #0a192f;
-  --background-light: #112240;
+  --primary-color: #5be8c7;
+  --primary-color-faded: #45a29e;
+  --background-dark: #050d18;
+  --background-light: #061838;
+  --background-light-transparent: rgba(6, 24, 56, 0.85);
   --white-color: #ccd6f6;
   --font-light: 300;
   --font-medium: 500;
@@ -45,9 +47,11 @@ footer {
 
 /* Profile Image */
 .profile-image {
-  width: 14rem;
-  height: 14rem;
+  width: 16rem;
+  height: 16rem;
   border-radius: 50%;
+  border: 0.25rem solid var(--primary-color);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   object-fit: cover;
   margin: 0 auto;
   display: block;
@@ -70,7 +74,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: rgba(10, 25, 47, 0.9);
+  background-color: var(--background-light-transparent);
   position: sticky;
   width: 100%;
   top: 0;
@@ -136,7 +140,7 @@ header nav ul li a:hover {
 
 .card-title {
   font-size: 1.5rem;
-  color: #64ffda;
+  color: var(--primary-color);
   margin-bottom: 0.7rem;
 }
 
@@ -181,7 +185,7 @@ header nav ul li a:hover {
 }
 
 .card-button-primary:hover {
-  background-color: #45a29e;
+  background-color: var(--primary-color-faded);
 }
 
 .card-button-secondary:hover {
@@ -227,7 +231,7 @@ header nav ul li a:hover {
 }
 
 .job-title a {
-  color: #64ffda;
+  color: var(--primary-color);
   text-decoration: none;
   font-size: 1.5rem;
 }
@@ -245,4 +249,57 @@ header nav ul li a:hover {
 .job-tech-icons img {
   width: 30px;
   height: 30px;
+}
+
+/* Contact Styles */
+.contact-form {
+  max-width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.input-field:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-color-faded);
+}
+
+@media (max-width: 600px) {
+  .form-group {
+    flex-direction: column;
+    gap: 0;
+  }
 }
