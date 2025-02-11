@@ -1,58 +1,119 @@
 ---
-
+import { Icon } from "astro-icon/components";
 ---
 
-<section class="experience">
+<section class="mt-2 mb-3">
   <h1>Work Experience</h1>
 
-  <!-- Mobbeel -->
-  <div class="job job-left">
-    <img
-      src="/public/mobbeel-landing-page.jpg"
-      alt="Mobbeel"
-      class="job-image"
-    />
-    <div class="job-content">
-      <h3 class="job-title">
-        <a
-          href="https://www.mobbeel.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Mobbeel Solutions S.L
-        </a>
-      </h3>
-      <p class="job-description">
-        Breve descripción de tus responsabilidades y logros en la Empresa 1.
-      </p>
-      <div class="job-tech-icons">
-        <img src="ruta-icono-tecnologia1.png" alt="Tecnología 1" />
-        <img src="ruta-icono-tecnologia2.png" alt="Tecnología 2" />
+  <div class="flex-col gap-1 mt-1">
+    <!-- Mobbeel -->
+    <div class="flex-row gap-1 experience-item">
+      <div class="experience-date">Aug 2023 — Aug 2024</div>
+      <div class="experience-content">
+        <h3 class="job-title">
+          <a
+            href="https://www.mobbeel.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Mobbeel Solutions S.L
+          </a>
+        </h3>
+        <p class="job-description">
+          Breve descripción de tus responsabilidades y logros en la Empresa 1.
+        </p>
+        <div class="job-tech-icons">
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">Angular</span>
+          <span class="tech-badge">NPM</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">HTML5</span>
+          <span class="tech-badge">CSS3</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Wa.Works -->
-  <div class="job job-right">
-    <img src="/public/wa-works-logo.jpg" alt="Empresa 2" class="job-image" />
-    <div class="job-content">
-      <h3 class="job-title">
-        <a
-          href="https://thehub.io/startups/waworks"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Wa.Works - Wide Assessment (Bergen, Norway)
-        </a>
-      </h3>
-      <p class="job-description">
-        Breve descripción de tus responsabilidades y logros en la Empresa 2.
-      </p>
-      <div class="job-tech-icons">
-        <img src="ruta-icono-tecnologia3.png" alt="Tecnología 3" />
-        <img src="ruta-icono-tecnologia4.png" alt="Tecnología 4" />
-        <!-- Añade más íconos según sea necesario -->
+    <!-- Wa.Works -->
+    <div class="flex-row gap-1 experience-item">
+      <div class="experience-date">Nov 2021 — Mar 2023</div>
+      <div class="experience-content">
+        <h3 class="job-title">
+          <a
+            href="https://thehub.io/startups/waworks"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Wa.Works - Wide Assessment (Bergen, Norway)
+          </a>
+        </h3>
+        <p class="job-description">
+          Breve descripción de tus responsabilidades y logros en la Empresa 2.
+        </p>
+        <div class="job-tech-icons">
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">NPM</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">HTML5</span>
+          <span class="tech-badge">CSS3</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .experience-item {
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.625rem;
+  }
+
+  .experience-date {
+    min-width: 13rem;
+    color: var(--secondary-font);
+    text-align: right;
+    font-size: 1rem;
+    padding-right: 0.5rem;
+    line-height: 2.1rem;
+  }
+
+  .experience-content {
+    width: 100%;
+  }
+
+  .job-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 2rem;
+  }
+
+  .job-description {
+    font-size: 1rem;
+    color: var(--secondary-font);
+    margin: 0.5rem 0;
+  }
+
+  .job-tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .tech-badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.9375rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s;
+    color: var(--primary-color);
+  }
+
+  .tech-badge:hover {
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+  }
+</style>
