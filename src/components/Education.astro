@@ -68,7 +68,6 @@ import { Icon } from "astro-icon/components";
 </section>
 
 <style>
-  /* TODO this should go to a CSS file */
   .block-container {
     display: flex;
     gap: 2rem;
@@ -79,9 +78,10 @@ import { Icon } from "astro-icon/components";
 
   .block {
     background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
-    border-radius: 12px;
-    width: 320px;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    width: 20rem; /* 320px */
+    max-height: fit-content;
     text-align: left;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
