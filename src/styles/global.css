@@ -17,6 +17,7 @@
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
+  --header-offset: 6rem; /* 96px - Offset for the sticky header */
 }
 
 /* Reset the CSS */
@@ -67,11 +68,16 @@ main {
 /* Sections */
 
 section {
+  scroll-margin-top: var(--header-offset); /* Offset for the sticky header */
   width: 100%; /* By default, the section takes the full width of the parent container */
 }
 
+#intro {
+  height: 90vh;
+}
+
 #education {
-  width: 80vw; /* 80% of the horizontal screen width */
+  width: 80vw; /* Overrides the default width */
 }
 
 /* Header and Footer */
@@ -79,18 +85,6 @@ header,
 footer {
   text-align: center;
   padding: 20px 0;
-}
-
-/* Profile Image */
-.profile-image {
-  width: 16rem;
-  height: 16rem;
-  border-radius: 50%;
-  border: 0.25rem solid var(--primary-color);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
-  margin: 0 auto;
-  display: block;
 }
 
 /* Links */

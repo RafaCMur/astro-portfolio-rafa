@@ -2,8 +2,8 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<section id="intro" class="mt-5 mb-10">
-  <div class="flex-row w-100 align-center">
+<section id="intro">
+  <div class="flex-row w-100 align-center mt-10">
     <div class="intro-text">
       <p class="big-text">Hi, I'm Rafa 👋</p>
       <p class="title-text gradient-text">Frontend Developer</p>
@@ -25,4 +25,40 @@ import { Icon } from "astro-icon/components";
       class="profile-image"
     />
   </div>
+  <strong class="scroll-indicator">↓ Scroll down</strong>
 </section>
+
+<style>
+  .profile-image {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    border: 0.25rem solid var(--primary-color);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary-color);
+    font-size: 1rem;
+    text-align: center;
+    animation: bounce 1.7s infinite;
+    cursor: pointer;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(10px);
+    }
+  }
+</style>
