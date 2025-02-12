@@ -13,6 +13,7 @@
   --background-light-transparent: rgba(6, 24, 56, 0.85);
   --white-color: #ccd6f6;
   --secondary-font: #a1a1a1;
+  --gray-border: #555c66;
   --font-light: 300;
   --font-medium: 500;
   --font-semi-bold: 600;
@@ -105,6 +106,7 @@ header {
   align-items: center;
   padding: 20px 40px;
   background-color: var(--background-light-transparent);
+  border-bottom: 1px solid var(--primary-color-faded); /* TODO: cambiar color y poner una variable si es un color común */
   position: sticky;
   width: 100%;
   top: 0;

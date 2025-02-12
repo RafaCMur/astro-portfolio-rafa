@@ -3,5 +3,24 @@
 ---
 
 <footer>
-  <p>&copy; 2025 Rafael Cabanillas Murillo. Todos los derechos reservados.</p>
+  <p>Crafted with ❤️ using Astro & Tailwind.</p>
+  <p>
+    &copy; {new Date().getFullYear()} Rafael Cabanillas Murillo. Todos los derechos
+    reservados.
+  </p>
 </footer>
+
+<style>
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--background-dark);
+    border-top: 1px solid var(--gray-border); /* TODO: cambiar color y poner una variable si es un color común */
+    font-size: 0.9rem;
+    color: var(--secondary-font);
+  }
+
+  footer p {
+    margin: 5px 0;
+  }
+</style>
