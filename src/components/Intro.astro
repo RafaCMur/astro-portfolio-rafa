@@ -4,34 +4,36 @@ import { RESUME_URL } from "../consts";
 ---
 
 <section id="intro" class="mb-2">
-  <div class="flex-row w-100 align-center mt-10">
-    <div class="intro-text">
-      <p class="big-text">Hi, I'm Rafa 👋</p>
-      <p class="title-text gradient-text">Frontend Developer</p>
-      <p>Who loves creating web apps.</p>
-      <div class="flex-row gap-1 mt-1">
-        <a
-          class="button-secondary"
-          href={RESUME_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>Resume</span>
-          <Icon name="resume" size={24} />
-        </a>
-        <a class="button-primary" href="#about">
-          <span>About me</span>
-          <Icon name="arrow-right2" size={24} />
-        </a>
+  <div class="section-content">
+    <div class="flex-row w-100 align-center mt-10">
+      <div class="intro-text">
+        <p class="big-text">Hi, I'm Rafa 👋</p>
+        <p class="title-text gradient-text">Frontend Developer</p>
+        <p>Who loves creating web apps.</p>
+        <div class="flex-row gap-1 mt-1">
+          <a
+            class="button-secondary"
+            href={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Resume</span>
+            <Icon name="resume" size={24} />
+          </a>
+          <a class="button-primary" href="#about">
+            <span>About me</span>
+            <Icon name="arrow-right2" size={24} />
+          </a>
+        </div>
       </div>
+      <img
+        src="https://fakeimg.pl/400x400/cccccc/0a99ff"
+        alt="Rafael Frontend Developer"
+        class="profile-image"
+      />
     </div>
-    <img
-      src="https://fakeimg.pl/400x400/cccccc/0a99ff"
-      alt="Rafael Frontend Developer"
-      class="profile-image"
-    />
+    <strong class="scroll-indicator">↓ Scroll down</strong>
   </div>
-  <strong class="scroll-indicator">↓ Scroll down</strong>
 </section>
 
 <style>

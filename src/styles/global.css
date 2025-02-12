@@ -58,7 +58,6 @@ h2 {
 /* Main container */
 
 main {
-  width: 60%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -70,15 +69,16 @@ main {
 
 section {
   scroll-margin-top: var(--header-offset); /* Offset for the sticky header */
-  width: 100%; /* By default, the section takes the full width of the parent container */
+  width: 100%;
+}
+
+.section-content {
+  width: 60%;
+  margin: 0 auto;
 }
 
 #intro {
   height: 90vh;
-}
-
-#education {
-  width: 80vw; /* Overrides the default width */
 }
 
 /* Header and Footer */

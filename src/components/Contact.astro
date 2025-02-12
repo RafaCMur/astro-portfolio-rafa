@@ -4,44 +4,48 @@ import { LINKEDIN_URL } from "../consts";
 ---
 
 <section id="contact" class="mt-5 mb-3">
-  <div class="flex-row gap-1">
-    <div class="contact-info">
-      <h1>Contact me</h1>
-      <p>Don't be shy :)</p>
+  <div class="section-content">
+    <div class="flex-row gap-1">
+      <div class="contact-info">
+        <h1>Contact me</h1>
+        <p>Don't be shy :)</p>
 
-      <div class="flex-col gap-1 mt-2">
-        <div class="flex-row gap-1">
-          <Icon name="mail" size={24} />
-          <a href="mailto:example@email.com">example@email.com</a>
-        </div>
+        <div class="flex-col gap-1 mt-2">
+          <div class="flex-row gap-1">
+            <Icon name="mail" size={24} />
+            <a href="mailto:example@email.com">example@email.com</a>
+          </div>
 
-        <div class="flex-row gap-1">
-          <Icon name="phone" size={24} />
-          <a href="tel:+34640126115">+34 640 12 61 15</a>
-        </div>
+          <div class="flex-row gap-1">
+            <Icon name="phone" size={24} />
+            <a href="tel:+34640126115">+34 640 12 61 15</a>
+          </div>
 
-        <div class="flex-row gap-1">
-          <Icon name="location-pin" size={24} />
-          <span>Quintana de la Serena, Spain</span>
-        </div>
+          <div class="flex-row gap-1">
+            <Icon name="location-pin" size={24} />
+            <span>Quintana de la Serena, Spain</span>
+          </div>
 
-        <div class="flex-row gap-1">
-          <Icon name="linkedin" size={24} />
-          <a href={LINKEDIN_URL} target="_blank">LinkedIn</a>
+          <div class="flex-row gap-1">
+            <Icon name="linkedin" size={24} />
+            <a href={LINKEDIN_URL} target="_blank">LinkedIn</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="contact-form">
-      <form class="flex-col gap-1 align-center">
-        <div class="flex-row gap-1 w-100">
-          <input type="text" placeholder="Name" class="input-field" />
-          <input type="email" placeholder="Email" class="input-field" />
-        </div>
-        <input type="text" placeholder="Subject" class="input-field w-100" />
-        <textarea placeholder="Message" class="input-field textarea"></textarea>
-        <button type="submit" class="button-primary w-50">Send Message</button>
-      </form>
+      <div class="contact-form">
+        <form class="flex-col gap-1 align-center">
+          <div class="flex-row gap-1 w-100">
+            <input type="text" placeholder="Name" class="input-field" />
+            <input type="email" placeholder="Email" class="input-field" />
+          </div>
+          <input type="text" placeholder="Subject" class="input-field w-100" />
+          <textarea placeholder="Message" class="input-field textarea"
+          ></textarea>
+          <button type="submit" class="button-primary w-50">Send Message</button
+          >
+        </form>
+      </div>
     </div>
   </div>
 </section>
