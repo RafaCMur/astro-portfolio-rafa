@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 import { LINKEDIN_URL } from "../consts";
 ---
 
-<section id="contact" class="mt-5 mb-3">
+<section id="contact" class="mt-5">
   <div class="section-content">
     <div class="flex-row gap-1">
       <div class="contact-info">
@@ -70,11 +70,26 @@ import { LINKEDIN_URL } from "../consts";
   .input-field {
     width: 100%;
     padding: 12px;
-    border: 1px solid var(--gray-border);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Define mejor los inputs */
     border-radius: 0.4rem;
-    background: #161b22;
+    background-color: #1b2a41; /* Un tono más claro que el fondo */
     color: #ffffff;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+    /* Sombras más sutiles */
+    box-shadow:
+      inset 1px 1px 3px rgba(0, 0, 0, 0.3),
+      inset -1px -1px 3px rgba(255, 255, 255, 0.04);
+  }
+
+  /* Efecto al enfocar */
+  .input-field:focus {
+    background-color: #22334d; /* Se aclara ligeramente al escribir */
+    border-color: var(--primary-color); /* Resalta el borde */
+    box-shadow:
+      inset 0px 0px 5px rgba(91, 232, 232, 0.3),
+      0px 0px 10px rgba(91, 232, 232, 0.2); /* Sombra externa sutil */
+    outline: none;
   }
 
   .input-field::placeholder {
@@ -88,7 +103,7 @@ import { LINKEDIN_URL } from "../consts";
   }
 
   .textarea {
-    height: 10rem;
+    height: 8rem;
     resize: vertical;
   }
 
