@@ -54,9 +54,24 @@ h2 {
 }
 
 /* Main container */
+
 main {
-  max-width: 900px;
+  width: 60%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sections */
+
+section {
+  width: 100%; /* By default, the section takes the full width of the parent container */
+}
+
+#education {
+  width: 80vw; /* 80% of the horizontal screen width */
 }
 
 /* Header and Footer */
@@ -223,16 +238,4 @@ header nav ul li a:hover {
   font-size: 1rem;
   color: #ccd6f6;
   margin-bottom: 1rem;
-}
-
-/* Work Experience Styles */
-
-.job-tech-icons {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.job-tech-icons img {
-  width: 30px;
-  height: 30px;
 }

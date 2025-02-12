@@ -8,12 +8,12 @@ import { Icon } from "astro-icon/components";
     <div class="block">
       <h2 class="mb-1">Education 🎓</h2>
       <div class="entry">
-        <p class="title">Software Engineer</p>
+        <h3>Software Engineer</h3>
         <p class="subtitle">University of Extremadura</p>
         <p class="date">(Sep 2019 - Jul 2023)</p>
       </div>
       <div class="entry">
-        <p class="title">Erasmus Exchange Student</p>
+        <h3>Erasmus Exchange Student</h3>
         <p class="subtitle">Høgskulen på Vestlandet</p>
         <p class="date">(Aug 2021 - Jun 2022)</p>
       </div>
@@ -23,37 +23,45 @@ import { Icon } from "astro-icon/components";
     <div class="block">
       <h2 class="mb-1">Courses 📚</h2>
       <div class="entry">
-        <p class="title">Learn React</p>
+        <h3>Learn React</h3>
         <p class="subtitle">Codecademy (2021)</p>
       </div>
       <div class="entry">
-        <p class="title">Machine Learning with Keras</p>
+        <h3>Machine Learning with Keras</h3>
         <p class="subtitle">IBM (2022)</p>
       </div>
       <div class="entry">
-        <p class="title">TypeScript sin fronteras</p>
+        <h3>TypeScript sin fronteras</h3>
         <p class="subtitle">Udemy (2023)</p>
       </div>
       <div class="entry">
-        <p class="title">Master en JavaScript</p>
+        <h3>Master en JavaScript</h3>
         <p class="subtitle">Victor Robles (2023)</p>
       </div>
     </div>
 
     <!-- Tech Stack Block -->
     <div class="block">
-      <h2 class="block-title">Tech Stack 🛠️</h2>
-      <div class="tech-icons">
-        <Icon name="html5" size={32} />
-        <Icon name="css3" size={32} />
-        <Icon name="javascript" size={32} />
-        <Icon name="typescript" size={32} />
-        <Icon name="react" size={32} />
-        <Icon name="python" size={32} />
-        <Icon name="nodejs" size={32} />
-        <Icon name="npm" size={32} />
-        <Icon name="git" size={32} />
-        <Icon name="jira" size={32} />
+      <h2 class="mb-1">Tech Stack 🛠️</h2>
+      <div class="mb-1">
+        <h3 class="mt-05">Frontend</h3>
+        <Icon name="tech-stack/react" size={32} title="React" />
+        <Icon name="tech-stack/angular" size={32} title="Angular" />
+        <Icon name="tech-stack/html5" size={32} title="HTML5" />
+        <Icon name="tech-stack/css3" size={32} title="CSS3" />
+        <Icon name="tech-stack/javascript" size={32} title="JavaScript" />
+        <Icon name="tech-stack/typescript" size={32} title="TypeScript" />
+      </div>
+      <div class="mb-1">
+        <h3>Backend</h3>
+        <Icon name="tech-stack/python" size={32} title="Python" />
+        <Icon name="tech-stack/nodejs" size={32} title="Node.js" />
+        <Icon name="tech-stack/npm" size={32} title="NPM" />
+      </div>
+      <div class="mb-1">
+        <h3>Agile methodology</h3>
+        <Icon name="tech-stack/git" size={32} title="Git" />
+        <Icon name="tech-stack/jira" size={32} title="Jira" />
       </div>
     </div>
   </div>
@@ -80,12 +88,6 @@ import { Icon } from "astro-icon/components";
 
   .entry {
     margin-bottom: 1.5rem;
-  }
-
-  .title {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #ffffff;
   }
 
   .subtitle,
