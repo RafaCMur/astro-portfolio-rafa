@@ -7,12 +7,14 @@ import { Icon } from "astro-icon/components";
     <h1>Projects</h1>
 
     <div class="flex-row mt-1 mb-1">
-      <div class="card">
-        <img
-          src="auth-screens-react-native-welcome-cropped.jpg"
-          alt="Descripción de la imagen"
-          class="card-image"
-        />
+      <divZ class="card">
+        <div class="card-image-container">
+          <img
+            src="auth-screens-react-native-welcome-cropped.jpg"
+            alt="Descripción de la imagen"
+            class="card-image"
+          />
+        </div>
         <div class="card-content">
           <h2 class="card-title">Auth Screens</h2>
           <p class="card-description">App created with React Native and Expo</p>
@@ -37,48 +39,44 @@ import { Icon } from "astro-icon/components";
             </a>
           </div>
         </div>
-      </div>
+      </divZ>
 
       <div class="card">
-        <img
-          src="https://fakeimg.pl/600x400/cccccc/0a99ff"
-          alt="Descripción de la imagen"
-          class="card-image"
-        />
+        <div class="card-image-container">
+          <img
+            src="tuning-chrome-extension.webp"
+            alt="Tuning device in a programming environment"
+            class="card-image"
+          />
+        </div>
         <div class="card-content">
-          <h2 class="card-title">Título del Proyecto</h2>
-          <p class="card-description">Breve descripción del proyecto.</p>
+          <h2 class="card-title">Chrome extension</h2>
+          <p class="card-description">Related to music tuning. React JS</p>
           <div class="flex-row gap-1">
-            <a href="enlace-al-proyecto" class="button-secondary">
-              <span>Code</span>
-              <Icon name="github" size={24} />
-            </a>
-            <a href="enlace-al-repositorio" class="button-primary">
-              <span>Demo</span>
-              <Icon name="external-link" size={24} />
-            </a>
+            <div class="button-secondary">
+              <span>Ongoing...</span>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <img
-          src="https://fakeimg.pl/600x400/cccccc/0a99ff"
-          alt="Descripción de la imagen"
-          class="card-image"
-        />
+        <div class="card-image-container">
+          <img
+            src="eye-friendly-vscode-theme.webp"
+            alt="Descripción de la imagen"
+            class="card-image"
+          />
+        </div>
         <div class="card-content">
-          <h2 class="card-title">Título del Proyecto</h2>
-          <p class="card-description">Breve descripción del proyecto.</p>
+          <h2 class="card-title">VSCode theme</h2>
+          <p class="card-description">
+            An eye friendly theme for Visual Studio Code.
+          </p>
           <div class="flex-row gap-1">
-            <a href="enlace-al-proyecto" class="button-secondary">
-              <span>Code</span>
-              <Icon name="github" size={24} />
-            </a>
-            <a href="enlace-al-repositorio" class="button-primary">
-              <span>Demo</span>
-              <Icon name="external-link" size={24} />
-            </a>
+            <div class="button-secondary">
+              <span>Ongoing...</span>
+            </div>
           </div>
         </div>
       </div>
@@ -88,15 +86,12 @@ import { Icon } from "astro-icon/components";
 
 <style>
   .card {
-    /* background-color: #112240; */
-    /* background-color: #1b3358; */
-    /* background-color: rgba(255, 255, 255, 0.1); */
     background-color: rgba(30, 56, 96, 0.7);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.2s;
-    max-width: 18rem; /* 288px */
+    width: 18rem; /* 288px */
     margin: 1rem;
   }
 
@@ -106,6 +101,9 @@ import { Icon } from "astro-icon/components";
 
   .card-image {
     width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire container */
+    aspect-ratio: 3 / 2;
   }
 
   .card-content {
