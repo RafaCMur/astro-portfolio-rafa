@@ -55,3 +55,9 @@ https://www.astroicon.dev/getting-started/
 To use astro icons there need to be an icons folder located below src. Then use it like this:
 
 <Icon name="github" size={24} />
+
+---
+
+Buenas prácticas
+
+- Consts file

@@ -1,6 +1,9 @@
 ---
 import { Icon } from "astro-icon/components";
-import { LINKEDIN_URL } from "../consts";
+import { ADDRESS, EMAIL, LINKEDIN_URL, PHONE } from "../consts";
+
+const MAILTO_LINK = `mailto:${EMAIL}`;
+const PHONE_LINK = `tel:${PHONE}`;
 ---
 
 <section id="contact" class="mt-5">
@@ -13,19 +16,17 @@ import { LINKEDIN_URL } from "../consts";
         <div class="flex-col gap-1 mt-2">
           <div class="flex-row gap-1">
             <Icon name="mail" size={24} />
-            <a href="mailto:rafacabanillasm@gmail.com">
-              rafacabanillasm@gmail.com
-            </a>
+            <a href={MAILTO_LINK}>{EMAIL}</a>
           </div>
 
           <div class="flex-row gap-1">
             <Icon name="phone" size={24} />
-            <a href="tel:+34640126115">+34 640 12 61 15</a>
+            <a href={PHONE_LINK}>{PHONE}</a>
           </div>
 
           <div class="flex-row gap-1">
             <Icon name="location-pin" size={24} />
-            <span>Quintana de la Serena, Spain</span>
+            <span>{ADDRESS}</span>
           </div>
 
           <div class="flex-row gap-1">
@@ -36,14 +37,31 @@ import { LINKEDIN_URL } from "../consts";
       </div>
 
       <div class="contact-form">
-        <form class="flex-col gap-1 align-center">
+        <form target="_blank" class="flex-col gap-1 align-center">
           <div class="flex-row gap-1 w-100">
-            <input type="text" placeholder="Name" class="input-field" />
-            <input type="email" placeholder="Email" class="input-field" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              class="input-field"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="input-field"
+            />
           </div>
-          <input type="text" placeholder="Subject" class="input-field w-100" />
-          <textarea placeholder="Message" class="input-field textarea"
-          ></textarea>
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            class="input-field w-100"
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            class="input-field textarea"></textarea>
           <button type="submit" class="button-primary w-50">Send Message</button
           >
         </form>
