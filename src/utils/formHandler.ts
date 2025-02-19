@@ -1,12 +1,15 @@
 import { supabase } from "./supabase";
 
+// TODO add hCaptcha support
+// TODO add data should be deleted after 180 days policy to the table
+
 export async function setupFormHandler(formId: string): Promise<void> {
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById(formId) as HTMLFormElement;
     if (!form) return;
 
     form.addEventListener("submit", async (event) => {
-      event.preventDefault();
+      event.preventDefault(); // Prevents the form from submitting and reloading the page
 
       const formData = new FormData(form);
       const submission = Object.fromEntries(formData.entries());

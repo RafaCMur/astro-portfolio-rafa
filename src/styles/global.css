@@ -124,7 +124,7 @@ header {
   align-items: center;
   padding: 20px 40px;
   background-color: var(--background-light-transparent);
-  border-bottom: 1px solid var(--primary-color-faded); /* TODO: cambiar color y poner una variable si es un color común */
+  border-bottom: 1px solid var(--primary-color-faded);
   position: sticky;
   width: 100%;
   top: 0;
