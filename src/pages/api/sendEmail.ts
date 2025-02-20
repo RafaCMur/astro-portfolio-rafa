@@ -62,12 +62,21 @@ export const POST: APIRoute = async ({ request }) => {
     // Define email content
     const mailOptions = {
       from: `"${body.name}" <${body.email}>`, // Sender
-      to: import.meta.env.SMTP_USER, // Receiver (your email)
+      to: import.meta.env.SMTP_USER, // Receiver (my email)
       subject: body.subject,
-      text: body.message,
-      html: `<p><strong>From:</strong> ${body.name} (${body.email})</p>
-             <p><strong>Message:</strong></p>
-             <p>${body.message}</p>`,
+      text: `${body.name} (${body.email}) sent you a message:\n\n${body.message}`, // Plain text fallback
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; padding: 1rem; border: 1px solid #ddd; border-radius: 8px;">
+          <h2 style="color: #333;">New Email from Astro Portfolio</h2>
+          <p><strong>From:</strong> ${body.name} (<a href="mailto:${body.email}">${body.email}</a>)</p>
+          <p><strong>Subject:</strong> ${body.subject}</p>
+          <p style="background: #f4f4f4; padding: 1rem; border-radius: 5px; font-style: italic;">
+            ${body.message}
+          </p>
+          <hr />
+          <p style="font-size: 12px; color: #888;">This message was sent from the contact form on <b>astro portfolio.</b></p>
+        </div>
+      `,
     };
 
     console.log("(OK) Sending email...");
