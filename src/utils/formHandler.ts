@@ -2,6 +2,7 @@ import { supabase } from "./supabase";
 
 // TODO add hCaptcha support
 // TODO add data should be deleted after 180 days policy to the table
+// TODO Linkedin post: Why you should avoid dependencies
 
 export async function setupFormHandler(formId: string): Promise<void> {
   document.addEventListener("DOMContentLoaded", () => {
@@ -9,17 +10,44 @@ export async function setupFormHandler(formId: string): Promise<void> {
     if (!form) return;
 
     form.addEventListener("submit", async (event) => {
-      event.preventDefault(); // Prevents the form from submitting and reloading the page
+      event.preventDefault();
 
       const formData = new FormData(form);
       const submission = Object.fromEntries(formData.entries());
 
-      console.log(submission);
-
+      // Save form data to Supabase
       const { error } = await supabase.from("entries").insert([submission]);
 
-      alert(error ? "Error sending form data" : "Form data sent successfully");
-      if (!error) form.reset();
+      if (error) {
+        alert("Error saving form data");
+        return;
+      }
+
+      alert("Form submitted successfully");
+
+      // Send confirmation email using API
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(submission),
+      });
+
+      // Log the raw response before parsing
+      const rawText = await response.text();
+      console.log("Raw response from server:", rawText);
+
+      try {
+        const result = JSON.parse(rawText);
+        if (!result.success) {
+          console.error("Error sending email:", result.error);
+          alert(
+            "Your message was saved, but we couldn't send a confirmation email.",
+          );
+        }
+      } catch (error) {
+        console.error("Error parsing JSON:", error);
+        alert("Server response is not valid JSON.");
+      }
     });
   });
 }

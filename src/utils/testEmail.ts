@@ -1,5 +1,10 @@
 import nodemailer from "nodemailer";
 
+// ------------ NOTE: This is a test script ------------
+// Run with:
+// $ bun ./src/utils/testEmail.ts
+// ---------------------------------------------------
+
 console.log("(LOG) SMTP_USER:", process.env.SMTP_USER);
 console.log(
   "(LOG) SMTP_PASS:",
