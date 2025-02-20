@@ -27,16 +27,13 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     // Check if environment variables are loaded
-    console.log(
-      "(OK) SMTP_USER:",
-      import.meta.env.SMTP_USER ?? "(ERR) NOT FOUND",
-    );
+    console.log("(OK) SMTP_USER:", process.env.SMTP_USER ?? "(ERR) NOT FOUND");
     console.log(
       "(OK) SMTP_PASS:",
-      import.meta.env.SMTP_PASS ? "(HIDDEN)" : "(ERR) NOT FOUND",
+      process.env.SMTP_PASS ? "(HIDDEN)" : "(ERR) NOT FOUND",
     );
 
-    if (!import.meta.env.SMTP_USER || !import.meta.env.SMTP_PASS) {
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
       console.error("(ERR) Missing SMTP credentials. Check your .env file.");
       return new Response(
         JSON.stringify({
@@ -54,15 +51,15 @@ export const POST: APIRoute = async ({ request }) => {
       port: 465,
       secure: true,
       auth: {
-        user: import.meta.env.SMTP_USER,
-        pass: import.meta.env.SMTP_PASS,
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
     // Define email content
     const mailOptions = {
       from: `"${body.name}" <${body.email}>`, // Sender
-      to: import.meta.env.SMTP_USER, // Receiver (my email)
+      to: process.env.SMTP_USER, // Receiver (my email)
       subject: body.subject,
       text: `${body.name} (${body.email}) sent you a message:\n\n${body.message}`, // Plain text fallback
       html: `
