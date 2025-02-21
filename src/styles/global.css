@@ -21,7 +21,7 @@
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
-  --header-offset: 6rem; /* 96px - Offset for the sticky header */
+  --header-offset: 5rem; /* 80px - Offset for the sticky header */
   --normal-text: 0.9rem;
   --small-text: 0.8rem;
   --x-small-text: 0.6rem;
