@@ -15,13 +15,16 @@
   --background-light-transparent: rgba(6, 24, 56, 0.85);
   --background-test2-transparent: rgba(16, 32, 58, 0.85);
   --white-color: #ccd6f6;
-  --secondary-font: #a1a1a1;
+  --gray-text: #a1a1a1;
   --gray-border: #555c66;
   --font-light: 300;
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
   --header-offset: 6rem; /* 96px - Offset for the sticky header */
+  --normal-text: 0.9rem;
+  --small-text: 0.8rem;
+  --x-small-text: 0.6rem;
 }
 
 /* Reset the CSS */
@@ -37,7 +40,8 @@ body {
   font-family: "Sora", sans-serif;
   background-color: var(--background-dark);
   color: var(--white-color);
-  line-height: 1.6;
+  line-height: 1.5;
+  font-size: var(--normal-text);
 }
 
 /* Heading fonts */
@@ -49,12 +53,12 @@ h3 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: var(--font-bold);
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: var(--font-semi-bold);
 }
 
@@ -158,7 +162,7 @@ header nav ul li a:hover {
 .button-primary,
 .button-secondary {
   text-align: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.2s;
@@ -197,11 +201,6 @@ header nav ul li a:hover {
 }
 
 /* Text styles */
-
-.small-text {
-  font-size: 0.8rem;
-  color: var(--secondary-font);
-}
 
 .title-text {
   font-size: 2rem;

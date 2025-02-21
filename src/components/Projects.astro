@@ -7,7 +7,7 @@ import { Icon } from "astro-icon/components";
     <h1>Projects</h1>
 
     <div class="flex-row mt-1 mb-1">
-      <divZ class="card">
+      <divZ class="card mr-1">
         <div class="card-image-container">
           <img
             src="auth-screens-react-native-welcome-cropped.jpg"
@@ -18,7 +18,7 @@ import { Icon } from "astro-icon/components";
         <div class="card-content">
           <h2 class="card-title">Auth Screens</h2>
           <p class="card-description">App created with React Native and Expo</p>
-          <div class="flex-row gap-1">
+          <div class="flex-row flex-wrap space-between gap-1">
             <a
               href="https://github.com/RafaCMur/auth-screens-react-native"
               target="_blank"
@@ -41,7 +41,7 @@ import { Icon } from "astro-icon/components";
         </div>
       </divZ>
 
-      <div class="card">
+      <div class="card ml-1 mr-1">
         <div class="card-image-container">
           <img
             src="tuning-chrome-extension.webp"
@@ -52,7 +52,7 @@ import { Icon } from "astro-icon/components";
         <div class="card-content">
           <h2 class="card-title">Chrome extension</h2>
           <p class="card-description">Related to music tuning. React JS</p>
-          <div class="flex-row gap-1">
+          <div class="flex-row flex-wrap space-between gap-1">
             <div class="button-secondary">
               <span>Ongoing...</span>
             </div>
@@ -60,7 +60,7 @@ import { Icon } from "astro-icon/components";
         </div>
       </div>
 
-      <div class="card">
+      <div class="card ml-1">
         <div class="card-image-container">
           <img
             src="eye-friendly-vscode-theme.webp"
@@ -73,7 +73,7 @@ import { Icon } from "astro-icon/components";
           <p class="card-description">
             An eye friendly theme for Visual Studio Code.
           </p>
-          <div class="flex-row gap-1">
+          <div class="flex-row flex-wrap space-between gap-1">
             <div class="button-secondary">
               <span>Ongoing...</span>
             </div>
@@ -92,7 +92,6 @@ import { Icon } from "astro-icon/components";
     overflow: hidden;
     transition: transform 0.2s;
     width: 18rem; /* 288px */
-    margin: 1rem;
   }
 
   .card:hover {
@@ -111,9 +110,8 @@ import { Icon } from "astro-icon/components";
   }
 
   .card-title {
-    font-size: 1.5rem;
     color: var(--primary-color);
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.6rem;
   }
 
   .card-description {
