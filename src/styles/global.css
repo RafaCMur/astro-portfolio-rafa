@@ -201,16 +201,3 @@ header nav ul li a:hover {
 }
 
 /* Text styles */
-
-.title-text {
-  font-size: 2rem;
-  font-weight: var(--font-bold);
-  font-family: "Montserrat", sans-serif;
-}
-
-.gradient-text {
-  background: linear-gradient(90deg, #007cf0, #00dfd8);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
