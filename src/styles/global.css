@@ -80,8 +80,10 @@ section {
 }
 
 .section-content {
-  width: 60%;
+  max-width: 900px;
+  min-width: 320px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 #intro {
@@ -198,4 +200,10 @@ header nav ul li a:hover {
 
 .button-secondary:hover {
   background-color: #1f4068;
+}
+
+@media (max-width: 768px) {
+  .section-content {
+    width: 90%; /* Wider for smaller screens */
+  }
 }
