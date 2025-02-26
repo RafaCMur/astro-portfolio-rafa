@@ -128,7 +128,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 1rem 2.5rem; /* 16px, 40px */
   background-color: var(--background-light-transparent);
   border-bottom: 1px solid var(--primary-color-faded);
   position: sticky;
@@ -137,26 +137,6 @@ header {
   left: 0;
   backdrop-filter: blur(10px);
   z-index: 1000;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-header nav ul li {
-  display: inline;
-}
-
-header nav ul li a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-header nav ul li a:hover {
-  text-decoration: underline;
 }
 
 /* Button styles */
@@ -205,5 +185,9 @@ header nav ul li a:hover {
 @media (max-width: 768px) {
   .section-content {
     width: 90%; /* Wider for smaller screens */
+  }
+
+  header {
+    display: none;
   }
 }

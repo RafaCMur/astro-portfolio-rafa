@@ -42,9 +42,20 @@ import { GITHUB_URL, LINKEDIN_URL } from "../consts";
     text-decoration: none;
     border-bottom-color: var(--accent);
   }
-  @media (max-width: 720px) {
-    .social-links {
-      display: none;
-    }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  nav ul li {
+    display: inline;
   }
 </style>
