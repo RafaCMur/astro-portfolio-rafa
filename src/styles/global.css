@@ -13,8 +13,7 @@
   --background-test: rgb(6, 24, 56);
   --background-test2: #10203a;
   --background-light-transparent: rgba(6, 24, 56, 0.85);
-  --background-test2-transparent: rgba(16, 32, 58, 0.85);
-  --white-color: #ccd6f6;
+  --dirty-white: #ccd6f6;
   --gray-text: #a1a1a1;
   --gray-border: #555c66;
   --font-light: 300;
@@ -39,7 +38,7 @@
 body {
   font-family: "Sora", sans-serif;
   background-color: var(--background-dark);
-  color: var(--white-color);
+  color: var(--dirty-white);
   line-height: 1.5;
   font-size: var(--normal-text);
 }
@@ -132,7 +131,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2.5rem; /* 16px, 40px */
+  padding: 0 2.5rem; /* 0, 40px */
   background-color: var(--background-light-transparent);
   border-bottom: 1px solid var(--primary-color-faded);
   position: sticky;
@@ -191,7 +190,8 @@ header {
     width: 90%; /* Wider for smaller screens */
   }
 
-  /* header {
-    display: none;
-  } */
+  header {
+    backdrop-filter: none;
+    background-color: var(--background-light);
+  }
 }
