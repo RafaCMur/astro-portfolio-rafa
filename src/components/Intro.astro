@@ -3,9 +3,9 @@ import { Icon } from "astro-icon/components";
 import { RESUME_URL } from "../consts";
 ---
 
-<section id="intro" class="mb-2">
+<section id="intro">
   <div class="section-content">
-    <div class="flex-row w-100 align-center mt-10">
+    <div class="intro-container">
       <div class="intro-text">
         <p class="big-text">Hi, I'm Rafa 👋</p>
         <p class="title-text gradient-text">Frontend Developer</p>
@@ -27,16 +27,32 @@ import { RESUME_URL } from "../consts";
         </div>
       </div>
       <img
-        src="/rafael-frontend-developer.jpg"
+        src="https://avatars.githubusercontent.com/u/29613995?v=4"
         alt="Rafael Frontend Developer"
         class="profile-image"
       />
     </div>
-    <strong class="scroll-indicator">↓ Scroll down</strong>
   </div>
+  <strong class="scroll-indicator">↓ Scroll down</strong>
 </section>
 
 <style>
+  #intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+  }
+
+  .intro-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
   .title-text {
     font-size: 2rem;
     font-weight: var(--font-bold);
@@ -80,6 +96,34 @@ import { RESUME_URL } from "../consts";
     }
     50% {
       transform: translateX(-50%) translateY(10px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    #intro {
+      min-height: 100vh;
+    }
+
+    .intro-container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .intro-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .scroll-indicator {
+      display: none;
+    }
+
+    .profile-image {
+      width: 12rem;
+      height: 12rem;
     }
   }
 </style>
