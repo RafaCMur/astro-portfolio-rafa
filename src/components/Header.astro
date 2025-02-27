@@ -4,8 +4,11 @@ import { GITHUB_URL, LINKEDIN_URL } from "../consts";
 ---
 
 <header>
+  <!-- Button to toggle the mobile menu -->
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+
   <!-- Navigation -->
-  <nav>
+  <nav class="mobile-menu">
     <ul>
       <li><a href="#about">About me</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -42,9 +45,74 @@ import { GITHUB_URL, LINKEDIN_URL } from "../consts";
     text-decoration: none;
     border-bottom-color: var(--accent);
   }
-  @media (max-width: 720px) {
-    .social-links {
-      display: none;
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  nav ul li {
+    display: inline;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .mobile-menu-toggle {
+      display: block;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: var(--primary-color);
+      cursor: pointer;
     }
+
+    .mobile-menu {
+    display: none; /* Menú oculto por defecto */
+  }
+
+  .mobile-menu.active {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background: var(--background-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .mobile-menu.active ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mobile-menu.active ul li a {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
   }
 </style>
+
+<script>
+  import { setupMobileMenu } from "../utils/mobile-menu.ts";
+  setupMobileMenu();
+</script>
+

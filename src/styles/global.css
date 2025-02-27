@@ -13,15 +13,14 @@
   --background-test: rgb(6, 24, 56);
   --background-test2: #10203a;
   --background-light-transparent: rgba(6, 24, 56, 0.85);
-  --background-test2-transparent: rgba(16, 32, 58, 0.85);
-  --white-color: #ccd6f6;
+  --dirty-white: #ccd6f6;
   --gray-text: #a1a1a1;
   --gray-border: #555c66;
   --font-light: 300;
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
-  --header-offset: 5rem; /* 80px - Offset for the sticky header */
+  --header-height: 11vh; /* Height of the sticky header */
   --normal-text: 0.9rem;
   --small-text: 0.8rem;
   --x-small-text: 0.6rem;
@@ -39,7 +38,7 @@
 body {
   font-family: "Sora", sans-serif;
   background-color: var(--background-dark);
-  color: var(--white-color);
+  color: var(--dirty-white);
   line-height: 1.5;
   font-size: var(--normal-text);
 }
@@ -75,32 +74,36 @@ main {
 /* Sections */
 
 section {
-  scroll-margin-top: var(--header-offset); /* Offset for the sticky header */
+  scroll-margin-top: var(--header-height); /* Offset for the sticky header */
   width: 100%;
+  padding: 3rem 0;
 }
 
 .section-content {
-  width: 60%;
+  max-width: 900px;
+  min-width: 320px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 #intro {
-  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--header-height));
 }
 
 #about {
   background-color: var(--background-test2);
-  padding: 2rem 0;
 }
 
 #projects {
   background-color: var(--background-test2);
-  padding: 2rem 0;
 }
 
 #contact {
   background-color: var(--background-test2);
-  padding: 2rem 0;
 }
 
 /* Header and Footer */
@@ -123,10 +126,12 @@ a:hover {
 /* Header Styles */
 
 header {
+  height: var(--header-height);
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 0 2.5rem; /* 0, 40px */
   background-color: var(--background-light-transparent);
   border-bottom: 1px solid var(--primary-color-faded);
   position: sticky;
@@ -135,26 +140,6 @@ header {
   left: 0;
   backdrop-filter: blur(10px);
   z-index: 1000;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-header nav ul li {
-  display: inline;
-}
-
-header nav ul li a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-header nav ul li a:hover {
-  text-decoration: underline;
 }
 
 /* Button styles */
@@ -198,4 +183,15 @@ header nav ul li a:hover {
 
 .button-secondary:hover {
   background-color: #1f4068;
+}
+
+@media (max-width: 768px) {
+  .section-content {
+    width: 90%; /* Wider for smaller screens */
+  }
+
+  header {
+    backdrop-filter: none;
+    background-color: var(--background-light);
+  }
 }
