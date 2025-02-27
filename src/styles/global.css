@@ -188,6 +188,10 @@ header {
   }
 
   header {
-    display: none;
+    display: none; /* NO HEADER on smaller screens */
+  }
+
+  section {
+    scroll-margin-top: 0; /* Disable the offset for the sticky header (There is no header)*/
   }
 }
