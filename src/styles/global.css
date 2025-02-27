@@ -193,15 +193,7 @@ header {
     width: 90%; /* Wider for smaller screens */
   }
 
-  header {
-    display: none; /* NO HEADER on smaller screens */
-  }
-
-  section {
-    scroll-margin-top: 0; /* Disable the offset for the sticky header (There is no header)*/
-  }
-
-  #intro {
-    min-height: 100vh;
-  }
+  /* header {
+    display: none;
+  } */
 }
