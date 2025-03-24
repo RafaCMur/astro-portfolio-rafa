@@ -13,6 +13,7 @@
     "@supabase/supabase-js": "^2.49.1",
     "astro": "^5.4.0",
     "astro-icon": "^1.1.5",
+    "gsap": "^3.12.7",
     "nodemailer": "^6.10.0"
   },
   "devDependencies": {
