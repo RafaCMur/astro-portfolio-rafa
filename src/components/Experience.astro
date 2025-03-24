@@ -7,6 +7,51 @@ import { Icon } from "astro-icon/components";
     <h1>Work Experience</h1>
 
     <div class="flex-col gap-1 mt-1 exp-block-container">
+      <!-- Wa.Works -->
+      <a
+        href="https://github.com/RafaCMur"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="exp-link"
+      >
+        <div class="exp-block">
+          <div class="exp-date">Sep 2023 - Present</div>
+          <div class="exp-details">
+            <h3 class="job-title">
+              <span>Freelance developer</span>
+              <Icon class="astro-icon" name="arrow-up-right" size="1.2rem" />
+            </h3>
+            <ul class="job-description">
+              <li><strong>Web Developer</strong> for Amazon Brands.</li>
+              <li>Daily use of <strong>English</strong>.</li>
+              <li>Web development for a Crypto investment fund project.</li>
+              <li>Taking a C# and .NET course in my free time.</li>
+              <li>Also developing a Chrome extension in my free time.</li>
+              <li>
+                Professional image and video editing <strong
+                  ><u>(can show samples of my work)</u></strong
+                >.
+              </li>
+            </ul>
+
+            <div class="job-tech-icons">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Angular</span>
+              <span class="tech-badge">Next</span>
+              <span class="tech-badge">React Native</span>
+              <span class="tech-badge">NPM</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">Astro</span>
+              <span class="tech-badge">Canva</span>
+              <span class="tech-badge">PhotoShop</span>
+              <span class="tech-badge">Adobe Illustrator</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
       <!-- Mobbeel -->
       <a
         href="https://www.mobbeel.com"
@@ -23,16 +68,52 @@ import { Icon } from "astro-icon/components";
             </h3>
             <ul class="job-description">
               <li>
-                Developed web and mobile apps with Angular, React, JSON, and
-                REST APIs.
+                Main languages: React, Angular, TypeScript, JavaScript, HTML,
+                CSS, SASS.
               </li>
-              <li>Worked on Android/iOS, testing, and browsers.</li>
               <li>
-                Collaborated on a backoffice project and fully designed a web
-                app to automate manual processes.
+                Participated in 7+ projects for <strong
+                  >top-tier companies</strong
+                >.
               </li>
-              <li>Used Git, Agile (Jira, Trello), and integrated databases.</li>
-              <li>Contributed to a facial recognition app with TensorFlow.</li>
+              <li>
+                Extensive experience with web and mobile browsers ensuring
+                responsiveness.
+              </li>
+              <li>Android and iOS development experience.</li>
+              <li>
+                <strong>Unit and user testing</strong> with Jest and Playwright.
+              </li>
+              <li>
+                <strong>REST APIs</strong>, HTTP requests, and Postman usage.
+              </li>
+              <li>
+                Designed and developed a web portal in Angular, reducing manual
+                errors and saving
+                <strong><u>up to 70% of the time</u></strong> when configuring a
+                new Tenant.
+              </li>
+              <li>
+                Developed a new back-office system with a successful
+                presentation,
+                <strong><u>was congratulated</u></strong>.
+              </li>
+              <li>
+                Version control with Git, using Gitflow, managing branches,
+                releases, and multiple environments (DEV, STAGE, PROD).
+              </li>
+              <li>
+                Daily work in Agile environments using SCRUM (Jira) and Kanban
+                methodologies.
+              </li>
+              <li>
+                Fully designed and developed a QR screen feature for a major
+                banking firm.
+              </li>
+              <li>
+                Created mockups, focused on <strong>UX/UI</strong>, and followed
+                <strong>WCAG accessibility guidelines</strong>.
+              </li>
             </ul>
             <div class="job-tech-icons">
               <span class="tech-badge">React</span>
@@ -62,11 +143,20 @@ import { Icon } from "astro-icon/components";
               <Icon class="astro-icon" name="arrow-up-right" size="1.2rem" />
             </h3>
             <ul class="job-description">
-              <li>Built a KPI dashboard.</li>
-              <li>Worked with React Hooks, Redux, and TypeScript.</li>
+              <li>
+                Experience with React Hooks, Redux, Context API, and TypeScript.
+              </li>
+              <li>
+                Committed to finishing the last project before departure and
+                <strong><u>successfully achieved it</u></strong>.
+              </li>
               <li>Presented our project to the CEO.</li>
-              <li>Mentored and supported a teammate.</li>
+              <li>
+                Mentored a teammate and participated in pair programming
+                sessions.
+              </li>
             </ul>
+
             <div class="job-tech-icons">
               <span class="tech-badge">React</span>
               <span class="tech-badge">NPM</span>
@@ -103,7 +193,7 @@ import { Icon } from "astro-icon/components";
     min-width: 13rem;
     color: var(--gray-text);
     text-align: left;
-    font-size: var(--normal-text)
+    font-size: var(--normal-text);
     line-height: 2;
   }
 
@@ -166,24 +256,27 @@ import { Icon } from "astro-icon/components";
   }
 
   /* When hovering over an experience item, reduce the opacity of the rest */
-  .exp-block-container:has(.exp-link:hover)
-    .exp-link:not(:hover) {
+  .exp-block-container:has(.exp-link:hover) .exp-link:not(:hover) {
     opacity: 0.5;
     transition: opacity 0.15s ease-in-out;
   }
 
   @media (max-width: 768px) {
     .exp-block {
-        flex-direction: column;
+      flex-direction: column;
     }
 
     .exp-date {
-        min-width: auto;
-        width: 100%;
+      min-width: auto;
+      width: 100%;
     }
 
     .exp-details {
-        width: 100%;
+      width: 100%;
+    }
+
+    .job-description {
+      padding-left: 0.75rem;
     }
   }
 </style>
