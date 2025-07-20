@@ -1,0 +1,88 @@
+---
+
+---
+
+<section id="welcome">
+  <div class="section-content">
+    <div class="welcome-section">
+      <h1 class="welcome-title gradient-text">BIENVENIDO A MI MUNDO DIGITAL</h1>
+      <p class="welcome-subtitle">
+        Desarrollador Frontend especializado en crear experiencias web excepcionales que combinan diseño y rendimiento
+      </p>
+      <div class="stats-highlight">
+        <span class="big-number">+50</span>
+        <span class="stats-label">PROYECTOS COMPLETADOS<br>EXPERIENCIA COMO FREELANCE</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #welcome {
+    border-radius: 2rem 2rem 0 0;
+    position: relative;
+    z-index: 2;
+    margin-top: -2rem;
+    background: var(--background-test2);
+  }
+
+  .welcome-section {
+    text-align: center;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .welcome-title {
+    font-size: 2.5rem;
+    font-weight: var(--font-bold);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .welcome-subtitle {
+    font-size: 1.1rem;
+    color: var(--dirty-white);
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+  }
+
+  .stats-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .big-number {
+    font-size: 4rem;
+    font-weight: var(--font-bold);
+    color: var(--primary-color);
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .stats-label {
+    font-size: 0.9rem;
+    font-weight: var(--font-semi-bold);
+    color: var(--dirty-white);
+    letter-spacing: 0.05em;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .welcome-title {
+      font-size: 2rem;
+    }
+    
+    .big-number {
+      font-size: 3rem;
+    }
+    
+    .welcome-subtitle {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+  }
+</style>

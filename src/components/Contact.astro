@@ -7,71 +7,125 @@ const PHONE_LINK = `tel:${PHONE}`;
 ---
 
 <section id="contact">
-  <div class="section-content">
-    <div class="flex-row flex-wrap gap-2">
+  <!-- Hero Section -->
+  <div class="contact-hero">
+    <div class="hero-content">
+      <p class="hero-subtitle">¿LISTO PARA EMPEZAR?</p>
+      <h1 class="hero-title">
+        TRABAJEMOS<br />
+        <span class="highlight-text">JUNTOS</span>
+      </h1>
+      <p class="hero-description">
+        Transforma tu visión en realidad digital. Contáctame para crear
+        soluciones web excepcionales que impulsen tu negocio hacia el éxito.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="contact-section">
+    <div class="contact-container">
+      <!-- Contact Info -->
       <div class="contact-info">
-        <h1>Contact me</h1>
-        <p>Don't be shy :)</p>
+        <h2 class="info-title">CONTACTO</h2>
 
-        <div class="flex-col gap-1 mt-2">
-          <div class="flex-row gap-1">
-            <Icon name="mail" size={24} />
-            <a href={MAILTO_LINK}>{EMAIL}</a>
+        <div class="contact-details">
+          <div class="contact-item">
+            <Icon name="mail" size={20} class="contact-icon" />
+            <a href={MAILTO_LINK} class="contact-link">{EMAIL}</a>
           </div>
 
-          <div class="flex-row gap-1">
-            <Icon name="phone" size={24} />
-            <a href={PHONE_LINK}>{PHONE}</a>
+          <div class="contact-item">
+            <Icon name="phone" size={20} class="contact-icon" />
+            <a href={PHONE_LINK} class="contact-link">{PHONE}</a>
           </div>
 
-          <div class="flex-row gap-1">
-            <Icon name="location-pin" size={24} />
-            <span>{ADDRESS}</span>
+          <div class="contact-item">
+            <Icon name="location-pin" size={20} class="contact-icon" />
+            <span class="contact-text">{ADDRESS}</span>
           </div>
 
-          <div class="flex-row gap-1">
-            <Icon name="linkedin" size={24} />
-            <a href={LINKEDIN_URL} target="_blank">LinkedIn</a>
+          <div class="contact-item">
+            <Icon name="linkedin" size={20} class="contact-icon" />
+            <a href={LINKEDIN_URL} target="_blank" class="contact-link"
+              >LinkedIn</a
+            >
           </div>
         </div>
       </div>
 
+      <!-- Contact Form -->
       <div class="contact-form">
-        <form id="contact-form-1" class="flex-col gap-1 align-center">
-          <div class="flex-row gap-1 w-100">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              class="input-field"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              class="input-field"
-              required
-            />
+        <h2 class="form-title">ENVÍAME UN MENSAJE</h2>
+        <p class="form-description">
+          Cuéntame sobre tu proyecto y trabajemos juntos para hacerlo realidad.
+        </p>
+
+        <form id="contact-form" class="form-container">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre" class="form-label">Nombre *</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="apellidos" class="form-label">Apellidos *</label>
+              <input
+                type="text"
+                id="apellidos"
+                name="apellidos"
+                class="form-input"
+                required
+              />
+            </div>
           </div>
-          <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            class="input-field w-100"
-          />
-          <textarea
-            name="message"
-            placeholder="Message"
-            class="input-field textarea"
-            required></textarea>
-          <button type="submit" class="button-primary w-50">
-            Send Message
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email" class="form-label">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                class="form-input"
+              />
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="mensaje" class="form-label">Mensaje *</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              class="form-textarea"
+              rows="6"
+              placeholder="Cuéntame sobre tu proyecto..."
+              required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">
+            ENVIAR MENSAJE
+            <Icon name="arrow-up-right" size={20} class="submit-icon" />
           </button>
         </form>
         <script>
           import { setupFormHandler } from "../utils/formHandler.ts";
-          setupFormHandler("contact-form-1");
+          setupFormHandler("contact-form");
         </script>
       </div>
     </div>
@@ -79,66 +133,275 @@ const PHONE_LINK = `tel:${PHONE}`;
 </section>
 
 <style>
-  .contact-info {
-    flex: 1;
-    min-width: 15rem;
+  #contact {
+    background: var(--background-dark);
   }
 
-  .contact-form {
-    flex: 1;
-    min-width: 19rem;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .input-group {
+  /* Hero Section */
+  .contact-hero {
+    background:
+      linear-gradient(135deg, rgba(30, 56, 96, 0.85), rgba(45, 74, 90, 0.75)),
+      url("/images/minimalist-laptop-and-plant.jpg") center/cover;
+    min-height: 60vh;
     display: flex;
-    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
   }
 
-  .input-field {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Define mejor los inputs */
-    border-radius: 0.4rem;
-    background-color: #1b2a41; /* Un tono más claro que el fondo */
-    color: #ffffff;
-    transition: all 0.2s ease-in-out;
-
-    /* Sombras más sutiles */
-    box-shadow:
-      inset 1px 1px 3px rgba(0, 0, 0, 0.3),
-      inset -1px -1px 3px rgba(255, 255, 255, 0.04);
+  .hero-content {
+    max-width: 800px;
+    padding: 2rem;
   }
 
-  /* Efecto al enfocar */
-  .input-field:focus {
-    background-color: #22334d; /* Se aclara ligeramente al escribir */
-    border-color: var(--primary-color); /* Resalta el borde */
-    box-shadow:
-      inset 0px 0px 5px rgba(91, 232, 232, 0.3),
-      0px 0px 10px rgba(91, 232, 232, 0.2); /* Sombra externa sutil */
+  .hero-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: white;
+  }
+
+  .highlight-text {
+    background: linear-gradient(135deg, var(--primary-color), #7dd3fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    padding: 5rem 2rem;
+    background: var(--background-test2);
+  }
+
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  /* Contact Info */
+  .contact-info {
+    color: white;
+  }
+
+  .info-title {
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .info-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .contact-item:last-child {
+    border-bottom: none;
+  }
+
+  .contact-item:hover {
+    padding-left: 0.5rem;
+  }
+
+  .contact-icon {
+    color: var(--primary-color);
+    flex-shrink: 0;
+    opacity: 0.8;
+  }
+
+  .contact-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+  }
+
+  .contact-link:hover {
+    color: var(--primary-color);
+  }
+
+  .contact-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+  }
+
+  /* Contact Form */
+  .contact-form {
+    background: transparent;
+  }
+
+  .form-title {
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .form-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2.5rem;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 1rem 0;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    font-family: "Sora", sans-serif;
+    transition: all 0.3s ease;
+  }
+
+  .form-input:focus,
+  .form-textarea:focus {
     outline: none;
+    border-bottom-color: var(--primary-color);
+    background: transparent;
   }
 
-  .input-field::placeholder {
-    font-family: Sora;
-    font-size: 1em;
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
   }
 
-  .input-field:focus {
-    border-color: var(--primary-color);
-    outline: none;
-  }
-
-  .textarea {
-    height: 8rem;
+  .form-textarea {
     resize: vertical;
+    min-height: 120px;
   }
 
-  @media (max-width: 600px) {
-    .form-group {
-      flex-direction: column;
-      gap: 0;
+  .form-submit {
+    background: var(--primary-color);
+    color: var(--background-dark);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .form-submit:hover {
+    background: #7dd3fc;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(94, 232, 232, 0.3);
+  }
+
+  .submit-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .form-submit:hover .submit-icon {
+    transform: translate(2px, -2px);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-hero {
+      min-height: 50vh;
+      padding: 1rem;
+    }
+
+    .contact-section {
+      padding: 3rem 1rem;
+    }
+
+    .contact-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .contact-form {
+      padding: 1.5rem 0;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
     }
   }
 </style>

@@ -3,84 +3,182 @@ import { Icon } from "astro-icon/components";
 ---
 
 <section id="expertise">
-  <div class="section-content">
-    <h1>Expertise</h1>
+  <!-- Education Hero Section -->
+  <div class="education-hero">
+    <div class="hero-content">
+      <p class="hero-subtitle">MI FORMACIÓN HABLA POR MÍ</p>
+      <h1 class="hero-title">
+        EXCELENCIA EN<br />
+        <span class="highlight-text">EDUCACIÓN Y TECNOLOGÍA</span>
+      </h1>
+      <p class="hero-description">
+        Mi sólida formación académica y experiencia internacional me han
+        preparado para liderar proyectos tecnológicos complejos con un enfoque
+        global y resultados excepcionales.
+      </p>
+
+      <div class="stats-container">
+        <div class="stat-item">
+          <div class="stat-number">8.5/10</div>
+          <div class="stat-label">NOTA MEDIA UNIVERSITARIA</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">+15 CURSOS</div>
+          <div class="stat-label">CERTIFICACIONES COMPLETADAS</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">2 PAÍSES</div>
+          <div class="stat-label">EXPERIENCIA INTERNACIONAL</div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="section-content-block">
-    <div class="block-container">
-      <!-- Education Block -->
-      <div class="block">
-        <h2 class="mb-1">Education 🎓</h2>
-        <div class="entry">
-          <h3>Software Engineer</h3>
-          <p class="subtitle">University of Extremadura</p>
-          <p class="date">(Sep 2019 - Jul 2023)</p>
+  <!-- Tech Stack Section -->
+  <div class="tech-stack-section">
+    <div class="tech-hero-content">
+      <p class="tech-subtitle">TECNOLOGÍAS QUE DOMINO</p>
+      <h2 class="tech-main-title">
+        EL STACK DE UN<br />
+        <span class="highlight-text">DESARROLLADOR COMPLETO</span>
+      </h2>
+      <p class="tech-description">
+        Desde interfaces modernas hasta arquitecturas backend robustas, manejo
+        las herramientas más demandadas del mercado tecnológico actual.
+      </p>
+    </div>
+
+    <div class="tech-showcase">
+      <div class="tech-category-modern">
+        <div class="category-header">
+          <h3 class="category-title">FRONTEND</h3>
+          <p class="category-subtitle">Interfaces Modernas & Responsivas</p>
         </div>
-        <div class="entry">
-          <h3>Erasmus Exchange Student</h3>
-          <p class="subtitle">Høgskulen på Vestlandet</p>
-          <p class="date">(Aug 2021 - Jun 2022)</p>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <Icon name="tech-stack/react" size={50} title="React" />
+            <span class="tech-name">React</span>
+          </div>
+          <div class="tech-item">
+            <Icon name="tech-stack/angular" size={50} title="Angular" />
+            <span class="tech-name">Angular</span>
+          </div>
+          <div class="tech-item">
+            <Icon name="tech-stack/next-js" size={50} title="Next.js" />
+            <span class="tech-name">Next.js</span>
+          </div>
+          <div class="tech-item">
+            <Icon name="tech-stack/typescript" size={50} title="TypeScript" />
+            <span class="tech-name">TypeScript</span>
+          </div>
+          <div class="tech-item">
+            <Icon name="tech-stack/astro" size={50} title="Astro" />
+            <span class="tech-name">Astro</span>
+          </div>
+          <div class="tech-item">
+            <Icon name="tech-stack/html5" size={50} title="HTML5" />
+            <span class="tech-name">HTML5</span>
+          </div>
         </div>
       </div>
 
-      <!-- Courses Block -->
-      <div class="block">
-        <h2 class="mb-1">Courses 📚</h2>
-        <div class="entry">
-          <h3>Learn React</h3>
-          <p class="subtitle">Codecademy (2021)</p>
+      <div class="tech-category-modern">
+        <div class="category-header">
+          <h3 class="category-title">BACKEND & TOOLS</h3>
+          <p class="category-subtitle">Arquitectura & Desarrollo</p>
         </div>
-        <div class="entry">
-          <h3>Machine Learning with Keras</h3>
-          <p class="subtitle">IBM (2022)</p>
-        </div>
-        <div class="entry">
-          <h3>TypeScript sin fronteras</h3>
-          <p class="subtitle">Udemy (2023)</p>
-        </div>
-        <div class="entry">
-          <h3>Master en JavaScript</h3>
-          <p class="subtitle">Victor Robles (2023)</p>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <Icon name="tech-stack/python" size={50} title="Python" />
+            <span class="tech-name">Python</span>
+          </div>
+          <div class="tech-item">
+            <Icon name="tech-stack/java" size={50} title="Java" />
+            <span class="tech-name">Java</span>
+          </div>
+          <div class="tech-item">
+            <Icon name="tech-stack/nodejs" size={50} title="Node.js" />
+            <span class="tech-name">Node.js</span>
+          </div>
+          <div class="tech-item">
+            <Icon name="tech-stack/git" size={50} title="Git" />
+            <span class="tech-name">Git</span>
+          </div>
+          <div class="tech-item">
+            <Icon name="tech-stack/github" size={50} title="GitHub" />
+            <span class="tech-name">GitHub</span>
+          </div>
+          <div class="tech-item">
+            <Icon name="tech-stack/npm" size={50} title="NPM" />
+            <span class="tech-name">NPM</span>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <!-- Tech Stack Block -->
-      <div class="block">
-        <h2 class="mb-1">Tech Stack 🛠️</h2>
-        <div class="mb-1">
-          <h3 class="mt-05">Frontend</h3>
-          <Icon name="tech-stack/react" size={28} title="React" />
-          <Icon name="tech-stack/angular" size={28} title="Angular" />
-          <Icon name="tech-stack/next-js" size={28} title="Next JS" />
-          <Icon name="tech-stack/html5" size={28} title="HTML5" />
-          <Icon name="tech-stack/css3" size={28} title="CSS3" />
-          <Icon name="tech-stack/javascript" size={28} title="JavaScript" />
-          <Icon name="tech-stack/typescript" size={28} title="TypeScript" />
-          <Icon name="tech-stack/sass" size={28} title="SASS" />
-          <Icon name="tech-stack/tailwind" size={28} title="TailWind CSS" />
-          <Icon name="tech-stack/astro" size={28} title="Astro" />
+  <!-- Certificates Gallery Section -->
+  <div class="certificates-section">
+    <h2 class="gallery-title">CERTIFICACIONES Y CURSOS</h2>
+    <div class="certificates-grid">
+      <div class="certificate-item">
+        <img
+          src="https://placehold.co/400x300/1e3860/5be8e8?text=REACT+CERTIFICATE"
+          alt="React Certificate"
+        />
+        <div class="certificate-overlay">
+          <h3>LEARN REACT</h3>
+          <p>Codecademy (2021)</p>
         </div>
-        <div class="mb-1">
-          <h3>Backend</h3>
-          <Icon name="tech-stack/python" size={28} title="Python" />
-          <Icon name="tech-stack/java" size={28} title="Java" />
-          <Icon name="tech-stack/bun" size={28} title="Bun" />
-          <Icon name="tech-stack/postman" size={28} title="Postman" />
-          <Icon name="tech-stack/nodejs" size={28} title="Node.js" />
-          <Icon name="tech-stack/npm" size={28} title="NPM" />
-          <Icon name="tech-stack/supabase" size={28} title="Supabase" />
+      </div>
+      <div class="certificate-item">
+        <img
+          src="https://placehold.co/400x300/2d4a5a/7dd3fc?text=ML+KERAS"
+          alt="Machine Learning Certificate"
+        />
+        <div class="certificate-overlay">
+          <h3>MACHINE LEARNING</h3>
+          <p>IBM Keras (2022)</p>
         </div>
-        <div class="mb-1">
-          <h3>Management</h3>
-          <Icon name="tech-stack/git" size={28} title="Git" />
-          <Icon name="tech-stack/jira" size={28} title="Jira" />
-          <Icon name="tech-stack/gitlab" size={28} title="GitLab" />
-          <Icon name="tech-stack/github" size={28} title="GitHub" />
+      </div>
+      <div class="certificate-item">
+        <img
+          src="https://placehold.co/400x300/374151/a7f3d0?text=TYPESCRIPT"
+          alt="TypeScript Certificate"
+        />
+        <div class="certificate-overlay">
+          <h3>TYPESCRIPT</h3>
+          <p>Udemy (2023)</p>
         </div>
-        <div class="mb-1">
-          <h3>Learning</h3>
-          <Icon name="tech-stack/csharp" size={28} title="C#" />
+      </div>
+      <div class="certificate-item">
+        <img
+          src="https://placehold.co/400x300/4c1d95/c4b5fd?text=JAVASCRIPT"
+          alt="JavaScript Certificate"
+        />
+        <div class="certificate-overlay">
+          <h3>MASTER JAVASCRIPT</h3>
+          <p>Victor Robles (2023)</p>
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img
+          src="https://placehold.co/400x300/7c2d12/fed7aa?text=ANGULAR"
+          alt="Angular Certificate"
+        />
+        <div class="certificate-overlay">
+          <h3>ANGULAR AVANZADO</h3>
+          <p>Certificación (2023)</p>
+        </div>
+      </div>
+      <div class="certificate-item">
+        <img
+          src="https://placehold.co/400x300/0f766e/a7f3d0?text=FULLSTACK"
+          alt="Full Stack Certificate"
+        />
+        <div class="certificate-overlay">
+          <h3>FULL STACK</h3>
+          <p>Desarrollo Completo</p>
         </div>
       </div>
     </div>
@@ -88,36 +186,329 @@ import { Icon } from "astro-icon/components";
 </section>
 
 <style>
-  .section-content-block {
-    width: 96%;
+  /* Hero Section Styles */
+  .education-hero {
+    padding-bottom: 3rem;
+    background:
+      linear-gradient(135deg, rgba(30, 56, 96, 0.85), rgba(45, 74, 90, 0.75)),
+      url("/images/hogskulen-pa-vestlandet.jpg") center/cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    padding: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: white;
+  }
+
+  .highlight-text {
+    background: linear-gradient(135deg, #d4af37, #f4d03f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: #2ecc71;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  /* Tech Stack Section */
+  .tech-stack-section {
+    padding: 4rem 2rem;
+    background: var(--background-dark);
+    border-radius: 2rem;
+    position: relative;
+    z-index: 2;
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+  }
+
+  .tech-hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+  }
+
+  .tech-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .tech-main-title {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: white;
+  }
+
+  .tech-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
     margin: 0 auto;
   }
 
-  .block-container {
+  .tech-showcase {
     display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
+    gap: 3rem;
     justify-content: center;
-    margin-top: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  .block {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    width: 20rem; /* 320px */
-    max-height: fit-content;
-    text-align: left;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  .tech-category-modern {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    min-width: 450px;
+    flex: 1;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
   }
 
-  .entry {
-    margin-bottom: 1.5rem;
+  .tech-category-modern:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   }
 
-  .subtitle,
-  .date {
-    color: #a1a1a1;
+  .category-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .category-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+  }
+
+  .category-subtitle {
     font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+  }
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+  }
+
+  .tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .tech-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-3px);
+  }
+
+  .tech-name {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tech-icons [data-icon] {
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+    filter: grayscale(0.3);
+  }
+
+  .tech-icons [data-icon]:hover {
+    transform: scale(1.2);
+    filter: grayscale(0);
+  }
+
+  /* Certificates Gallery */
+  .certificates-section {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: var(--background-test2);
+    text-align: center;
+  }
+
+  .gallery-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+  }
+
+  .certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .certificate-item {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    transition: transform 0.3s ease;
+  }
+
+  .certificate-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .certificate-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .certificate-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .certificate-item:hover .certificate-overlay {
+    transform: translateY(0);
+  }
+
+  .certificate-overlay h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+
+  .certificate-overlay p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .education-hero {
+      min-height: 60vh;
+      padding: 1rem;
+    }
+
+    .hero-content {
+      padding: 1rem;
+    }
+
+    .stats-container {
+      gap: 2rem;
+      flex-direction: column;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .tech-categories {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .tech-category {
+      min-width: auto;
+    }
+
+    .certificates-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .section-title,
+    .gallery-title {
+      font-size: 2rem;
+    }
   }
 </style>

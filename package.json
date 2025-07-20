@@ -9,15 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vercel": "^8.1.0",
-    "@supabase/supabase-js": "^2.49.1",
-    "astro": "^5.4.0",
+    "@astrojs/vercel": "8.2.2",
+    "@supabase/supabase-js": "^2.52.0",
+    "astro": "5.12.0",
     "astro-icon": "^1.1.5",
-    "nodemailer": "^6.10.0"
+    "nodemailer": "^6.10.1"
   },
   "devDependencies": {
     "@types/nodemailer": "^6.4.17",
-    "prettier": "^3.5.2",
+    "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1"
   }
 }
