@@ -31,7 +31,6 @@ import { RESUME_URL } from "../consts";
       class="profile-image"
     />
   </div>
-  <strong class="scroll-indicator">↓ Scroll down</strong>
 </section>
 
 <style>
@@ -67,18 +66,6 @@ import { RESUME_URL } from "../consts";
     display: block;
   }
 
-  .scroll-indicator {
-    position: absolute;
-    bottom: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--primary-color);
-    font-size: 1rem;
-    text-align: center;
-    animation: bounce 1.7s infinite;
-    cursor: pointer;
-  }
-
   @keyframes bounce {
     0%,
     100% {
@@ -102,10 +89,6 @@ import { RESUME_URL } from "../consts";
       align-items: center;
       justify-content: center;
       text-align: center;
-    }
-
-    .scroll-indicator {
-      display: none;
     }
 
     .profile-image {
