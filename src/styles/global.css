@@ -61,6 +61,13 @@ h2 {
   font-weight: var(--font-semi-bold);
 }
 
+.gradient-text {
+  background: linear-gradient(90deg, #007cf0, #00dfd8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Main container */
 
 main {
@@ -76,7 +83,6 @@ main {
 section {
   scroll-margin-top: var(--header-height); /* Offset for the sticky header */
   width: 100%;
-  padding: 3rem 0;
 }
 
 .section-content {
@@ -134,12 +140,17 @@ header {
   padding: 0 2.5rem; /* 0, 40px */
   background-color: var(--background-light-transparent);
   border-bottom: 1px solid var(--primary-color-faded);
-  position: sticky;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   backdrop-filter: blur(10px);
   z-index: 1000;
+}
+
+/* Main content offset for fixed header */
+main {
+  padding-top: var(--header-height);
 }
 
 /* Button styles */

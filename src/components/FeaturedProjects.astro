@@ -1,0 +1,387 @@
+---
+
+---
+
+<section id="featured-projects">
+  <div class="projects-container flex-row flex-wrap justify-center gap-2">
+    <!-- Project 1: Auth Screens -->
+    <div class="project-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img
+            src="/auth-screens-react-native-welcome-cropped.jpg"
+            alt="Auth Screens"
+          />
+          <div class="card-overlay">
+            <h3>AUTH SCREENS</h3>
+            <p>React Native & Expo</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <h3>Auth Screens</h3>
+          <p>
+            Aplicación móvil completa con pantallas de autenticación,
+            desarrollada con React Native y Expo. Incluye login, registro y
+            gestión de usuarios.
+          </p>
+          <div class="card-buttons">
+            <a
+              href="https://github.com/RafaCMur/auth-screens-react-native"
+              target="_blank"
+              class="btn-code"
+            >
+              <span>Code</span>
+            </a>
+            <a
+              href="https://drive.google.com/drive/folders/1vd-xsVqwOO-rSTbotLDocccvpFipFFTS?usp=drive_link"
+              target="_blank"
+              class="btn-demo"
+            >
+              <span>Demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2: Chrome Extension -->
+    <div class="project-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="/tuning-chrome-extension.webp" alt="Chrome Extension" />
+          <div class="card-overlay">
+            <h3>CHROME EXTENSION</h3>
+            <p>React JS</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <h3>Chrome Extension</h3>
+          <p>
+            Extensión de Chrome para afinación musical desarrollada con React
+            JS. Herramienta útil para músicos que necesitan afinar sus
+            instrumentos.
+          </p>
+          <div class="card-buttons">
+            <a href="#" class="btn-code disabled">
+              <span>En desarrollo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3: VSCode Theme -->
+    <div class="project-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="/eye-friendly-vscode-theme.webp" alt="VSCode Theme" />
+          <div class="card-overlay">
+            <h3>VSCODE THEME</h3>
+            <p>Visual Studio Code</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <h3>VSCode Theme</h3>
+          <p>
+            Tema personalizado para Visual Studio Code diseñado para reducir la
+            fatiga visual durante largas sesiones de programación.
+          </p>
+          <div class="card-buttons">
+            <a href="#" class="btn-code disabled">
+              <span>En desarrollo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4: E-commerce Platform (Invented) -->
+    <div class="project-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img
+            src="https://placehold.co/600x400/1e3860/5be8e8?text=E-COMMERCE"
+            alt="E-commerce Platform"
+          />
+          <div class="card-overlay">
+            <h3>E-COMMERCE</h3>
+            <p>Next.js & Stripe</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <h3>E-commerce Platform</h3>
+          <p>
+            Plataforma de comercio electrónico completa con Next.js, integración
+            de pagos con Stripe y panel de administración. Diseño responsive y
+            moderno.
+          </p>
+          <div class="card-buttons">
+            <a href="#" class="btn-code">
+              <span>Code</span>
+            </a>
+            <a href="#" class="btn-demo">
+              <span>Demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #featured-projects {
+    border-radius: 0 0 2rem 2rem;
+    background: var(--background-test2);
+    position: relative;
+    z-index: 5;
+    margin-bottom: -2rem;
+  }
+
+  .projects-title {
+    font-size: 2.2rem;
+    font-weight: var(--font-bold);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+  }
+
+  .projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+  }
+
+  .project-card {
+    background: transparent;
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 350px;
+    max-width: 500px;
+    aspect-ratio: 5/4;
+    perspective: 1000px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+
+  .project-card:hover {
+    z-index: 50;
+  }
+
+  .project-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* Touch support for mobile */
+  .project-card:active .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* Alternative: click/tap to flip on mobile */
+  @media (hover: none) and (pointer: coarse) {
+    .project-card .card-inner {
+      transition: transform 0.6s ease;
+    }
+
+    .project-card:active .card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 0.1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-front {
+    background: var(--background-light);
+    transform: rotateY(0deg);
+  }
+
+  .card-back {
+    background: var(--background-light);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .card-overlay h3 {
+    font-size: 1.2rem;
+    font-weight: var(--font-bold);
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+
+  .card-overlay p {
+    font-size: 0.9rem;
+    color: var(--dirty-white);
+    margin: 0;
+  }
+
+  .card-back h3 {
+    font-size: 1.4rem;
+    font-weight: var(--font-bold);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  .card-back p {
+    color: var(--dirty-white);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .card-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .btn-code,
+  .btn-demo {
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    font-weight: var(--font-semi-bold);
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    border: 2px solid;
+  }
+
+  .btn-code {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  .btn-code:hover {
+    background: var(--primary-color);
+    color: var(--background-dark);
+  }
+
+  .btn-demo {
+    background: var(--primary-color);
+    color: var(--background-dark);
+    border-color: var(--primary-color);
+  }
+
+  .btn-demo:hover {
+    background: transparent;
+    color: var(--primary-color);
+  }
+
+  .btn-code.disabled {
+    background: var(--gray-border);
+    color: var(--gray-text);
+    border-color: var(--gray-border);
+    cursor: not-allowed;
+  }
+
+  .btn-code.disabled:hover {
+    background: var(--gray-border);
+    color: var(--gray-text);
+  }
+
+  @media (max-width: 768px) {
+    .project-card {
+      flex: 1 1 100%;
+      min-width: 280px;
+      aspect-ratio: 5/4;
+    }
+
+    .projects-title {
+      font-size: 1.8rem;
+    }
+
+    .card-back {
+      padding: 1.5rem;
+    }
+
+    .card-buttons {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  }
+</style>
+
+<script>
+  // Enhanced mobile interaction for flip cards
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".project-card");
+
+    // Check if device supports touch
+    const isTouchDevice =
+      "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+    if (isTouchDevice) {
+      cards.forEach((card) => {
+        let isFlipped = false;
+
+        card.addEventListener("click", (e) => {
+          e.preventDefault();
+          const cardInner = card.querySelector(".card-inner");
+
+          if (cardInner && cardInner instanceof HTMLElement) {
+            if (!isFlipped) {
+              cardInner.style.transform = "rotateY(180deg)";
+              isFlipped = true;
+            } else {
+              cardInner.style.transform = "rotateY(0deg)";
+              isFlipped = false;
+            }
+          }
+        });
+
+        // Reset flip state when clicking outside
+        document.addEventListener("click", (e) => {
+          if (e.target instanceof Node && !card.contains(e.target)) {
+            const cardInner = card.querySelector(".card-inner");
+            if (cardInner && cardInner instanceof HTMLElement) {
+              cardInner.style.transform = "rotateY(0deg)";
+              isFlipped = false;
+            }
+          }
+        });
+      });
+    }
+  });
+</script>
