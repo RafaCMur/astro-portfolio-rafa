@@ -9,26 +9,25 @@ import { Icon } from "astro-icon/components";
       <p class="hero-subtitle">OUR NUMBERS SPEAK FOR THEMSELVES</p>
       <h1 class="hero-title">
         THE VOICE OF<br />
-        <span class="highlight-text">FRONTEND DEVELOPMENT</span>
+        <span class="yellow-text">FRONTEND DEVELOPMENT</span>
       </h1>
       <p class="hero-description">
-        With my deep experience and sector knowledge, I offer expert
-        development and tailored solutions that drive the success of each
-        project, acting as the reliable bridge between client vision
-        and market reality.
+        With my deep experience and sector knowledge, I offer expert development
+        and tailored solutions that drive the success of each project, acting as
+        the reliable bridge between client vision and market reality.
       </p>
 
       <div class="stats-container">
         <div class="stat-item">
-          <div class="stat-number">500%</div>
-          <div class="stat-label">GROWTH SINCE 2019</div>
+          <div class="stat-number">UX/UI</div>
+          <div class="stat-label">EXCELLENT SKILLS</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">+50</div>
           <div class="stat-label">SUCCESSFULLY COMPLETED PROJECTS</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">3</div>
+          <div class="stat-number">3+</div>
           <div class="stat-label">YEARS OF PROFESSIONAL EXPERIENCE</div>
         </div>
       </div>
@@ -38,23 +37,18 @@ import { Icon } from "astro-icon/components";
   <!-- Professional Journey Section -->
   <div class="journey-section">
     <div class="journey-header">
-      <p class="journey-subtitle">ABOUT OUR CEO AND FOUNDER</p>
-      <h2 class="journey-title">RAFA CARMONA</h2>
+      <p class="journey-subtitle">MEET THE DEVELOPER</p>
+      <h2 class="journey-title">RAFA CABANILLAS</h2>
       <p class="journey-description">
-        Rafa Carmona is a visionary and pioneer in the frontend development
-        sector, recognized as one of the most influential developers
-        according to the tech community. Born in Extremadura with an initial
-        career in engineering, Rafa brought his talent for identifying
-        emerging trends to modern web development.
+        Frontend developer specialized in React and modern technologies.
+        Passionate about creating exceptional web experiences that combine
+        innovation, quality, and user-centered design.
       </p>
-      <p class="journey-description">
-        His innovative leadership has established new standards of quality and
-        service. Rafa promotes a business philosophy based on
-        transparency, ethics and sustainability, inspiring others with his
-        integrity and commitment. His ability to anticipate and adapt to
-        market needs has been widely recognized, positioning his
-        work as a benchmark of excellence and trust in global web development.
-      </p>
+
+      <a href="/about" class="common-button">
+        <span>Learn More About Me</span>
+        <Icon name="arrow-right" size={20} class="button-icon" />
+      </a>
     </div>
   </div>
 
@@ -197,10 +191,13 @@ import { Icon } from "astro-icon/components";
     <div class="cta-content">
       <h2 class="cta-title">BECOME A CLIENT!</h2>
       <p class="cta-description">
-        Ready to take your project to the next level? Let's work together
-        to create exceptional web solutions.
+        Ready to take your project to the next level? Let's work together to
+        create exceptional web solutions.
       </p>
-      <a href="#contact" class="cta-button"> DISCOVER MY PROJECTS </a>
+      <a href="/contact" class="common-button">
+        <span>CONTACT ME!</span>
+        <Icon name="arrow-right" size={20} class="button-icon" />
+      </a>
     </div>
   </div>
 
@@ -245,14 +242,6 @@ import { Icon } from "astro-icon/components";
       color: white;
     }
 
-    .highlight-text {
-      background: linear-gradient(135deg, var(--primary-color), #7dd3fc);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-    }
-
     .hero-description {
       font-size: 1.1rem;
       line-height: 1.6;
@@ -267,18 +256,6 @@ import { Icon } from "astro-icon/components";
       justify-content: center;
       gap: 3rem;
       flex-wrap: wrap;
-    }
-
-    .stat-item {
-      text-align: center;
-    }
-
-    .stat-number {
-      font-size: clamp(2.5rem, 4vw, 3.5rem);
-      font-weight: 700;
-      color: #2ecc71;
-      margin-bottom: 0.5rem;
-      line-height: 1;
     }
 
     .stat-label {
@@ -322,7 +299,7 @@ import { Icon } from "astro-icon/components";
       line-height: 1.7;
       color: rgba(255, 255, 255, 0.9);
       margin-bottom: 2rem;
-      text-align: justify;
+      text-align: center;
     }
 
     /* Timeline Section */
@@ -507,25 +484,6 @@ import { Icon } from "astro-icon/components";
       line-height: 1.6;
       color: rgba(255, 255, 255, 0.9);
       margin-bottom: 2rem;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background: var(--primary-color);
-      color: var(--background-dark);
-      padding: 1rem 2rem;
-      border-radius: 0.5rem;
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background: #7dd3fc;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(94, 232, 232, 0.3);
     }
 
     /* Responsive Design */

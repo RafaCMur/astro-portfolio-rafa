@@ -68,6 +68,59 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
+.yellow-text {
+  background: linear-gradient(135deg, #d4af37, #f4d03f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #2ecc71;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+/* Common Button Styles */
+.common-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 1.5rem;
+}
+
+.common-button:hover {
+  background: var(--primary-color);
+  color: var(--background-dark);
+  transform: translateY(-2px);
+  text-decoration: none;
+  box-shadow: 0 8px 16px rgba(94, 232, 232, 0.3);
+}
+
+.common-button .button-icon {
+  transition: transform 0.3s ease;
+}
+
+.common-button:hover .button-icon {
+  transform: translateX(3px);
+}
+
 /* Main container */
 
 main {

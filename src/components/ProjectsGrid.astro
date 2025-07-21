@@ -1,0 +1,86 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import type { Project } from "../data/projects";
+
+interface Props {
+  projects: Project[];
+  title?: string;
+  fullWidth?: boolean;
+}
+
+const { projects, title, fullWidth = false } = Astro.props;
+---
+
+{title && (
+  <div class="projects-header">
+    <h2 class="projects-title">{title}</h2>
+  </div>
+)}
+
+<div class={`projects-grid ${fullWidth ? 'full-width' : ''}`}>
+  {projects.map((project) => (
+    <ProjectCard project={project} />
+  ))}
+</div>
+
+<style>
+  .projects-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .projects-title {
+    font-size: 2.2rem;
+    font-weight: var(--font-bold);
+    color: var(--primary-color);
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.1em;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .projects-grid.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 0 2rem;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    .projects-grid.full-width {
+      padding: 0 1rem;
+    }
+
+    .projects-title {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+  }
+</style>
