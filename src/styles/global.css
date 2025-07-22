@@ -9,9 +9,7 @@
   --primary-color: #5be8e8;
   --primary-color-faded: #459aa2;
   --background-dark: #050d18;
-  --background-light: #081937;
-  --background-test: rgb(6, 24, 56);
-  --background-test2: #10203a;
+  --background-light: #10203a;
   --background-light-transparent: rgba(6, 24, 56, 0.85);
   --dirty-white: #ccd6f6;
   --gray-text: #a1a1a1;
@@ -153,18 +151,6 @@ section {
   min-height: calc(100vh - var(--header-height));
 }
 
-#about {
-  background-color: var(--background-test2);
-}
-
-#projects {
-  background-color: var(--background-test2);
-}
-
-#contact {
-  background-color: var(--background-test2);
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -174,25 +160,6 @@ footer {
 /* Links */
 a {
   color: var(--primary-color);
-}
-
-/* Header Styles */
-
-header {
-  height: var(--header-height);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2.5rem; /* 0, 40px */
-  background-color: var(--background-light-transparent);
-  border-bottom: 1px solid var(--primary-color-faded);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  backdrop-filter: blur(10px);
-  z-index: 1000;
 }
 
 /* Main content offset for fixed header */

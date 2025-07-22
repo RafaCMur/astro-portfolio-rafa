@@ -11,16 +11,16 @@ interface Props {
 const { projects, title, fullWidth = false } = Astro.props;
 ---
 
-{title && (
-  <div class="projects-header">
-    <h2 class="projects-title">{title}</h2>
-  </div>
-)}
+{
+  title && (
+    <div class="projects-header">
+      <h2 class="projects-title">{title}</h2>
+    </div>
+  )
+}
 
-<div class={`projects-grid ${fullWidth ? 'full-width' : ''}`}>
-  {projects.map((project) => (
-    <ProjectCard project={project} />
-  ))}
+<div class={`projects-grid ${fullWidth ? "full-width" : ""}`}>
+  {projects.map((project) => <ProjectCard project={project} />)}
 </div>
 
 <style>
@@ -43,6 +43,7 @@ const { projects, title, fullWidth = false } = Astro.props;
     gap: 2rem;
     width: 100%;
     padding: 0 2rem;
+    margin-bottom: 3rem;
   }
 
   .projects-grid.full-width {
