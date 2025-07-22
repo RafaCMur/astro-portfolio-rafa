@@ -162,25 +162,6 @@ a {
   color: var(--primary-color);
 }
 
-/* Header Styles */
-
-header {
-  height: var(--header-height);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2.5rem; /* 0, 40px */
-  background-color: var(--background-light-transparent);
-  border-bottom: 1px solid var(--primary-color-faded);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
-
 /* Main content offset for fixed header */
 main {
   padding-top: var(--header-height);

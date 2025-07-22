@@ -3,116 +3,317 @@ import { Icon } from "astro-icon/components";
 import { GITHUB_URL, LINKEDIN_URL } from "../consts";
 ---
 
-<header>
-  <!-- Button to toggle the mobile menu -->
-  <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+<header class="main-header">
+  <div class="header-container">
+    <!-- Home Icon -->
+    <div class="home-icon">
+      <a href="/" class="home-link" aria-label="Home">
+        <Icon name="home" size={28} />
+      </a>
+    </div>
 
-  <!-- Navigation -->
-  <nav class="mobile-menu">
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About me</a></li>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="/expertise">Expertise</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <ul class="nav-list">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/about" class="nav-link">About me</a></li>
+        <li><a href="/projects" class="nav-link">Projects</a></li>
+        <li><a href="/expertise" class="nav-link">Expertise</a></li>
+        <li><a href="/contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
 
-  <!-- Social links -->
-  <div class="social-links flex-row gap-1">
-    <a href={GITHUB_URL} target="_blank">
-      <Icon name="github" size={32} aria-label="GitHub profile" />
-    </a>
-    <a href={LINKEDIN_URL} target="_blank">
-      <Icon name="linkedin" size={32} aria-label="LinkedIn profile" />
-    </a>
+    <!-- Social links -->
+    <div class="social-links">
+      <a href={GITHUB_URL} target="_blank" class="social-link">
+        <Icon name="github" size={24} aria-label="GitHub profile" />
+      </a>
+      <a href={LINKEDIN_URL} target="_blank" class="social-link">
+        <Icon name="linkedin" size={24} aria-label="LinkedIn profile" />
+      </a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
   </div>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav">
+    <ul class="mobile-nav-list">
+      <li><a href="/" class="mobile-nav-link">Home</a></li>
+      <li><a href="/about" class="mobile-nav-link">About me</a></li>
+      <li><a href="/projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="/expertise" class="mobile-nav-link">Expertise</a></li>
+      <li><a href="/contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+
+    <div class="mobile-social">
+      <a href={GITHUB_URL} target="_blank" class="mobile-social-link">
+        <Icon name="github" size={24} aria-label="GitHub profile" />
+      </a>
+      <a href={LINKEDIN_URL} target="_blank" class="mobile-social-link">
+        <Icon name="linkedin" size={24} aria-label="LinkedIn profile" />
+      </a>
+    </div>
+  </nav>
 </header>
 
 <style>
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  nav a {
-    padding: 1em 0.5em;
-    color: var(--black);
-    border-bottom: 4px solid transparent;
-    text-decoration: none;
-  }
-  nav a.active {
-    text-decoration: none;
-    border-bottom-color: var(--accent);
+  .main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--background-light-transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--primary-color-faded);
+    height: var(--header-height);
+    width: 100%;
   }
 
-  nav ul {
-    list-style: none;
-    display: flex;
+  .header-container {
+    height: 100%;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 2.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
     gap: 20px;
   }
 
-  nav ul li a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  nav ul li {
-    display: inline;
-  }
-
-  .mobile-menu-toggle {
-    display: none;
-  }
-
-  @media (max-width: 768px) {
-    .mobile-menu-toggle {
-      display: block;
-      font-size: 2rem;
-      background: none;
-      border: none;
-      color: var(--primary-color);
-      cursor: pointer;
-    }
-
-    .mobile-menu {
-    display: none; /* Menu hidden by default */
-  }
-
-  .mobile-menu.active {
-    position: absolute;
-    top: var(--header-height);
-    left: 0;
-    width: 100%;
-    height: calc(100vh - var(--header-height));
-    background: var(--background-dark);
+  /* Home Icon */
+  .home-link {
+    color: #b8b8b8;
+    transition: all 0.3s ease;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
   }
 
-  .mobile-menu.active ul {
+  .home-link:hover {
+    color: var(--primary-color);
+    background: rgba(0, 212, 255, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* Desktop Navigation */
+  .desktop-nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-list {
+    display: flex;
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: #b8b8b8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-color);
+    background: rgba(0, 212, 255, 0.1);
+  }
+
+  .nav-link.active {
+    color: var(--primary-color);
+    background: rgba(0, 212, 255, 0.15);
+  }
+
+  /* Social Links */
+  .social-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .social-link {
+    color: #b8b8b8;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+  }
+
+  .social-link:hover {
+    color: var(--primary-color);
+    background: rgba(0, 212, 255, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* Mobile Menu Toggle */
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    gap: 4px;
+  }
+
+  .hamburger-line {
+    width: 25px;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+
+  /* Mobile Navigation */
+  .mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(5, 13, 24, 0.98);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+    padding: 30px 20px;
+  }
+
+  .mobile-nav.active {
+    display: block;
+  }
+
+  .mobile-nav-list {
+    list-style: none;
+    margin: 0 0 30px 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    text-align: center;
   }
 
-  .mobile-menu.active ul li a {
-    color: var(--primary-color);
-    font-size: 1.2rem;
+  .mobile-nav-link {
+    color: #b8b8b8;
     text-decoration: none;
+    font-size: 1.1rem;
     font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: block;
+  }
+
+  .mobile-nav-link:hover {
+    color: var(--primary-color);
+    background: rgba(0, 212, 255, 0.1);
+  }
+
+  .mobile-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 212, 255, 0.2);
+  }
+
+  .mobile-social-link {
+    color: #b8b8b8;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgba(0, 212, 255, 0.1);
+  }
+
+  .mobile-social-link:hover {
+    color: var(--primary-color);
+    background: rgba(0, 212, 255, 0.2);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .desktop-nav,
+    .social-links {
+      display: none;
+    }
+
+    .mobile-menu-toggle {
+      display: flex;
+    }
+
+    .header-container {
+      grid-template-columns: auto 1fr auto;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-container {
+      padding: 0 1rem;
+    }
   }
 </style>
 
 <script>
-  import { setupMobileMenu } from "../utils/mobile-menu.ts";
-  setupMobileMenu();
-</script>
+  // Mobile menu functionality
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileToggle = document.querySelector(".mobile-menu-toggle");
+    const mobileNav = document.querySelector(".mobile-nav");
+    const hamburgerLines = document.querySelectorAll(".hamburger-line");
 
+    if (mobileToggle && mobileNav) {
+      mobileToggle.addEventListener("click", () => {
+        mobileNav.classList.toggle("active");
+
+        // Animate hamburger lines
+        hamburgerLines.forEach((line, index) => {
+          const htmlLine = line as HTMLElement;
+          if (mobileNav.classList.contains("active")) {
+            if (index === 0)
+              htmlLine.style.transform = "rotate(45deg) translate(6px, 6px)";
+            if (index === 1) htmlLine.style.opacity = "0";
+            if (index === 2)
+              htmlLine.style.transform = "rotate(-45deg) translate(6px, -6px)";
+          } else {
+            htmlLine.style.transform = "none";
+            htmlLine.style.opacity = "1";
+          }
+        });
+      });
+
+      // Close mobile menu when clicking on a link
+      const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileNav.classList.remove("active");
+          hamburgerLines.forEach((line) => {
+            const htmlLine = line as HTMLElement;
+            htmlLine.style.transform = "none";
+            htmlLine.style.opacity = "1";
+          });
+        });
+      });
+    }
+  });
+</script>
