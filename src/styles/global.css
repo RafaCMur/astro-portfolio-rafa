@@ -1,5 +1,5 @@
 /* Global Styles for Portfolio */
-@import url("mini-tailwind.css");
+@import url("./mini-tailwind.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 
@@ -165,8 +165,7 @@ section {
   background-color: var(--background-test2);
 }
 
-/* Header and Footer */
-header,
+/* Footer */
 footer {
   text-align: center;
   padding: 20px 0;
@@ -193,7 +192,7 @@ header {
   padding: 0 2.5rem; /* 0, 40px */
   background-color: var(--background-light-transparent);
   border-bottom: 1px solid var(--primary-color-faded);
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 0;
   left: 0;
