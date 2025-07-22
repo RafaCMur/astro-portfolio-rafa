@@ -10,12 +10,8 @@ const { project } = Astro.props;
 ---
 
 <div class="project-card">
-  <img
-    src={project.image}
-    alt={project.title}
-    class="project-image"
-  />
-  
+  <img src={project.image} alt={project.title} class="project-image" />
+
   <!-- Always visible title -->
   <div class="project-info">
     <h3 class="project-title">{project.title}</h3>
@@ -24,35 +20,41 @@ const { project } = Astro.props;
   <!-- Hover overlay with description and buttons -->
   <div class="project-overlay">
     <p class="project-description">{project.description}</p>
-    
+
     <div class="project-buttons">
-      {project.codeUrl && (
-        <a
-          href={project.codeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-code"
-        >
-          <Icon name="github" size={16} />
-          <span>Code</span>
-        </a>
-      )}
-      
-      {project.demoUrl && (
-        <a
-          href={project.demoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-demo"
-        >
-          <Icon name="external-link" size={16} />
-          <span>Demo</span>
-        </a>
-      )}
-      
-      {project.status === 'in-development' && (
-        <span class="status-badge">In Development</span>
-      )}
+      {
+        project.codeUrl && (
+          <a
+            href={project.codeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-code"
+          >
+            <Icon name="github" size={16} />
+            <span>Code</span>
+          </a>
+        )
+      }
+
+      {
+        project.demoUrl && (
+          <a
+            href={project.demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-demo"
+          >
+            <Icon name="external-link" size={16} />
+            <span>Demo</span>
+          </a>
+        )
+      }
+
+      {
+        project.status === "in-development" && (
+          <span class="status-badge">In Development</span>
+        )
+      }
     </div>
   </div>
 </div>
@@ -60,7 +62,7 @@ const { project } = Astro.props;
 <style>
   .project-card {
     position: relative;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/2;
     overflow: hidden;
     border-radius: 0.5rem;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -101,8 +103,6 @@ const { project } = Astro.props;
     margin-bottom: 0.5rem;
     color: var(--primary-color);
   }
-
-
 
   /* Hover overlay */
   .project-overlay {
