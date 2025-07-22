@@ -174,11 +174,6 @@ footer {
 /* Links */
 a {
   color: var(--primary-color);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 /* Header Styles */
@@ -192,7 +187,7 @@ header {
   padding: 0 2.5rem; /* 0, 40px */
   background-color: var(--background-light-transparent);
   border-bottom: 1px solid var(--primary-color-faded);
-  position: sticky;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
