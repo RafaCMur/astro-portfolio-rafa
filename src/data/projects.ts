@@ -62,7 +62,7 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     description:
       "Modern portfolio website built with Astro, featuring responsive design and optimized performance.",
-    image: "https://placehold.co/600x400/4c1d95/c4b5fd?text=PORTFOLIO",
+    image: "/images/astro-portfolio-about-hero.jpg",
     codeUrl: "https://github.com/RafaCMur/astro-portfolio-rafa",
     featured: true,
     status: "completed",
