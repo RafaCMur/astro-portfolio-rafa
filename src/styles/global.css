@@ -9,9 +9,7 @@
   --primary-color: #5be8e8;
   --primary-color-faded: #459aa2;
   --background-dark: #050d18;
-  --background-light: #081937;
-  --background-test: rgb(6, 24, 56);
-  --background-test2: #10203a;
+  --background-light: #10203a;
   --background-light-transparent: rgba(6, 24, 56, 0.85);
   --dirty-white: #ccd6f6;
   --gray-text: #a1a1a1;
@@ -151,18 +149,6 @@ section {
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - var(--header-height));
-}
-
-#about {
-  background-color: var(--background-test2);
-}
-
-#projects {
-  background-color: var(--background-test2);
-}
-
-#contact {
-  background-color: var(--background-test2);
 }
 
 /* Footer */
