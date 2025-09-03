@@ -47,13 +47,13 @@ export const projects: Project[] = [
     status: "completed",
   },
   {
-    id: "ecommerce-platform",
-    title: "E-commerce Platform",
+    id: "aurux-design",
+    title: "Web Design",
     description:
       "Complete e-commerce platform with Next.js, Stripe payment integration and admin panel. Responsive and modern design.",
-    image: "https://placehold.co/600x400/1e3860/5be8e8?text=E-COMMERCE",
+    image: "/images/projects/aurux-design-hero.jpg",
     codeUrl: "#",
-    demoUrl: "#",
+    demoUrl: "https://auruxdesign.com/",
     featured: true,
     status: "completed",
   },
