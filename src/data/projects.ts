@@ -27,7 +27,7 @@ export const projects: Project[] = [
     title: "VSCode Theme",
     description:
       "Custom theme for Visual Studio Code designed to reduce eye strain during long programming sessions.",
-    image: "/images/eye-friendly-vscode-theme.webp",
+    image: "/images/projects/retina-vscode-theme.jpg",
     demoUrl:
       "https://marketplace.visualstudio.com/items?itemName=RafaCMur.retina",
     codeUrl: "https://github.com/RafaCMur/retina",
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     description:
       "Modern portfolio website built with Astro, featuring responsive design and optimized performance.",
-    image: "/images/astro-portfolio-about-hero.jpg",
+    image: "/images/projects/astro-portfolio-about.jpg",
     codeUrl: "https://github.com/RafaCMur/astro-portfolio-rafa",
     featured: true,
     status: "completed",
