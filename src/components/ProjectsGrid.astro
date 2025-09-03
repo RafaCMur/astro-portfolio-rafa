@@ -39,11 +39,24 @@ const { projects, title, fullWidth = false } = Astro.props;
 
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
     width: 100%;
     padding: 0 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    position: relative;
+  }
+
+  .projects-grid::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
   }
 
   .projects-grid.full-width {
@@ -54,6 +67,10 @@ const { projects, title, fullWidth = false } = Astro.props;
     margin-left: -50vw;
     margin-right: -50vw;
     padding: 0 2rem;
+    background: linear-gradient(135deg, rgba(30, 56, 96, 0.02), rgba(45, 74, 90, 0.05));
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-radius: 0;
   }
 
   /* Responsive adjustments */
@@ -81,7 +98,22 @@ const { projects, title, fullWidth = false } = Astro.props;
 
   @media (min-width: 1025px) {
     .projects-grid {
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 3rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1400px;
+      margin: 0 auto 4rem auto;
+    }
+
+    .projects-grid.full-width {
+      max-width: none;
+      margin-left: -50vw;
+      margin-right: -50vw;
     }
   }
 </style>
