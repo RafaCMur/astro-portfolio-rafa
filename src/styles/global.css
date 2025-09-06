@@ -68,6 +68,10 @@ h2 {
 }
 
 .yellow-text {
+  color: #d4af37;
+}
+
+.yellow-text-gradient {
   background: linear-gradient(135deg, #d4af37, #f4d03f);
   -webkit-background-clip: text;
   background-clip: text;
