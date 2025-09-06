@@ -300,7 +300,7 @@ import { Icon } from "astro-icon/components";
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 1.5rem;
     padding: 2.5rem;
-    min-width: 450px;
+    min-width: 300px;
     flex: 1;
     transition:
       transform 0.3s ease,
@@ -456,11 +456,11 @@ import { Icon } from "astro-icon/components";
   @media (max-width: 768px) {
     .education-hero {
       min-height: 60vh;
-      padding: 1rem;
+      padding: 2rem 1rem;
     }
 
     .hero-content {
-      padding: 1rem;
+      padding: 2rem 1rem;
     }
 
     .stats-container {
@@ -473,13 +473,19 @@ import { Icon } from "astro-icon/components";
       margin-bottom: 2rem;
     }
 
-    .tech-categories {
+    .tech-stack-section {
+      padding: 3rem 1rem;
+    }
+
+    .tech-showcase {
       flex-direction: column;
       gap: 2rem;
     }
 
-    .tech-category {
+    .tech-category-modern {
       min-width: auto;
+      width: 100%;
+      padding: 2rem 1.5rem;
     }
 
     .certificates-grid {
