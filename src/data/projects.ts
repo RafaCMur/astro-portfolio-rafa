@@ -11,8 +11,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "aurux-design",
+    title: "My Web Design Agency",
+    description:
+      "Complete e-commerce platform with Next.js, Stripe payment integration and admin panel. Responsive and modern design.",
+    image: "/images/projects/aurux-design-hero.jpg",
+    codeUrl: "#",
+    demoUrl: "https://auruxdesign.com/",
+    featured: true,
+    status: "completed",
+  },
+  {
     id: "chrome-extension",
-    title: "Chrome Extension",
+    title: "Music Chrome Extension",
     description:
       "Chrome extension for musical tuning developed with React JS. Useful tool for musicians who need to tune their instruments quickly and accurately.",
     image: "/images/true-resonance-presentation-img.png",
@@ -35,6 +46,16 @@ export const projects: Project[] = [
     status: "completed",
   },
   {
+    id: "portfolio-website",
+    title: "Portfolio Website",
+    description:
+      "Modern portfolio website built with Astro, featuring responsive design and optimized performance.",
+    image: "/images/projects/astro-portfolio-about.jpg",
+    codeUrl: "https://github.com/RafaCMur/astro-portfolio-rafa",
+    featured: true,
+    status: "completed",
+  },
+  {
     id: "auth-screens",
     title: "Auth Screens",
     description:
@@ -43,27 +64,6 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/RafaCMur/auth-screens-react-native",
     demoUrl:
       "https://drive.google.com/drive/folders/1vd-xsVqwOO-rSTbotLDocccvpFipFFTS?usp=drive_link",
-    featured: true,
-    status: "completed",
-  },
-  {
-    id: "aurux-design",
-    title: "Web Design",
-    description:
-      "Complete e-commerce platform with Next.js, Stripe payment integration and admin panel. Responsive and modern design.",
-    image: "/images/projects/aurux-design-hero.jpg",
-    codeUrl: "#",
-    demoUrl: "https://auruxdesign.com/",
-    featured: true,
-    status: "completed",
-  },
-  {
-    id: "portfolio-website",
-    title: "Portfolio Website",
-    description:
-      "Modern portfolio website built with Astro, featuring responsive design and optimized performance.",
-    image: "/images/projects/astro-portfolio-about.jpg",
-    codeUrl: "https://github.com/RafaCMur/astro-portfolio-rafa",
     featured: true,
     status: "completed",
   },
