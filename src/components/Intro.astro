@@ -10,7 +10,7 @@ import { RESUME_URL } from "../consts";
     <div class="intro-text">
       <p class="big-text">Hi, I'm Rafa 👋</p>
       <p class="title-text gradient-text">Frontend Developer</p>
-      <p>Who loves creating web apps.</p>
+      <p class="subtitle-text">Who loves creating web apps.</p>
       <div class="flex-row gap-1 mt-1">
         <a
           class="button-secondary"
@@ -38,7 +38,7 @@ import { RESUME_URL } from "../consts";
 <style>
   #intro {
     position: relative;
-    min-height: 90vh;
+    min-height: var(--intro-height);
     overflow: hidden;
     padding: 0;
     margin: 0;
@@ -49,7 +49,7 @@ import { RESUME_URL } from "../consts";
     top: 0;
     left: 0;
     width: 100%;
-    height: 90vh;
+    height: var(--intro-height);
     background-image: url("/images/hero-bg.jpg");
     background-size: cover;
     background-position: center;
@@ -62,7 +62,7 @@ import { RESUME_URL } from "../consts";
     top: 0;
     left: 0;
     width: 100%;
-    height: 90vh;
+    height: var(--intro-height);
     background: linear-gradient(
       135deg,
       rgba(20, 33, 61, 0.9) 0%,
@@ -81,19 +81,31 @@ import { RESUME_URL } from "../consts";
     gap: 2rem;
     position: relative;
     z-index: 1;
-    min-height: 90vh;
+    min-height: var(--intro-height);
     padding: 2rem;
   }
 
-  .title-text {
-    font-size: 2rem;
+  .big-text {
+    font-size: 1.5rem;
     font-weight: var(--font-bold);
     font-family: "Montserrat", sans-serif;
   }
 
+  .title-text {
+    font-size: 2.5rem;
+    font-weight: var(--font-bold);
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .subtitle-text {
+    font-size: 1rem;
+    font-weight: var(--font-medium);
+    font-family: "Montserrat", sans-serif;
+  }
+
   .profile-image {
-    width: 16rem;
-    height: 16rem;
+    width: 20rem;
+    height: 20rem;
     border-radius: 50%;
     border: 0.25rem solid var(--primary-color);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);

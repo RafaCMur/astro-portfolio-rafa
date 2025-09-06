@@ -19,6 +19,7 @@
   --font-semi-bold: 600;
   --font-bold: 700;
   --header-height: 11vh; /* Height of the sticky header */
+  --intro-height: 90vh;
   --normal-text: 0.9rem;
   --small-text: 0.8rem;
   --x-small-text: 0.6rem;
