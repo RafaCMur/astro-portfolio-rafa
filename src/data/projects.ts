@@ -16,7 +16,7 @@ export const projects: Project[] = [
     description:
       "Complete e-commerce platform with Next.js, Stripe payment integration and admin panel. Responsive and modern design.",
     image: "/images/projects/aurux-design-hero.jpg",
-    codeUrl: "#",
+    codeUrl: "",
     demoUrl: "https://auruxdesign.com/",
     featured: true,
     status: "completed",
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     title: "Music Chrome Extension",
     description:
       "Chrome extension for musical tuning developed with React JS. Useful tool for musicians who need to tune their instruments quickly and accurately.",
-    image: "/images/true-resonance-presentation-img.png",
+    image: "/images/projects/true-resonance-presentation-img.png",
     demoUrl:
       "https://chromewebstore.google.com/detail/true-resonance/fbjmobmlgofjclebagmnabejchajaifm",
     codeUrl: "https://github.com/RafaCMur/true-resonance",
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     title: "Auth Screens",
     description:
       "Complete mobile application with authentication screens, developed with React Native and Expo. Includes login, registration and user management.",
-    image: "/images/auth-screens-react-native-welcome-cropped.jpg",
+    image: "/images/projects/auth-screens-react-native-welcome-cropped.jpg",
     codeUrl: "https://github.com/RafaCMur/auth-screens-react-native",
     demoUrl:
       "https://drive.google.com/drive/folders/1vd-xsVqwOO-rSTbotLDocccvpFipFFTS?usp=drive_link",
