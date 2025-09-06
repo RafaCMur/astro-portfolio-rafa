@@ -127,7 +127,7 @@ import { Icon } from "astro-icon/components";
           alt="React Certificate"
         />
         <div class="certificate-overlay">
-          <h3>LEARN REACT</h3>
+          <h3 class="certificate-title">LEARN REACT</h3>
           <p>Codecademy (2025)</p>
         </div>
       </div>
@@ -137,7 +137,7 @@ import { Icon } from "astro-icon/components";
           alt="Machine Learning Certificate"
         />
         <div class="certificate-overlay">
-          <h3>MACHINE LEARNING</h3>
+          <h3 class="certificate-title">MACHINE LEARNING</h3>
           <p>IBM Keras (2022)</p>
         </div>
       </div>
@@ -147,7 +147,7 @@ import { Icon } from "astro-icon/components";
           alt="TypeScript Certificate"
         />
         <div class="certificate-overlay">
-          <h3>TYPESCRIPT</h3>
+          <h3 class="certificate-title">TYPESCRIPT</h3>
           <p>Udemy (2023)</p>
         </div>
       </div>
@@ -157,7 +157,7 @@ import { Icon } from "astro-icon/components";
           alt="JavaScript Certificate"
         />
         <div class="certificate-overlay">
-          <h3>MASTER JAVASCRIPT</h3>
+          <h3 class="certificate-title">MASTER JAVASCRIPT</h3>
           <p>Victor Robles (2023)</p>
         </div>
       </div>
@@ -167,7 +167,7 @@ import { Icon } from "astro-icon/components";
           alt="Azure DevOps Certificate"
         />
         <div class="certificate-overlay">
-          <h3>AZURE DEVOPS</h3>
+          <h3 class="certificate-title">AZURE DEVOPS</h3>
           <p>Tecnofor (2025)</p>
         </div>
       </div>
@@ -177,7 +177,7 @@ import { Icon } from "astro-icon/components";
           alt="Machine Learning Certificate"
         />
         <div class="certificate-overlay">
-          <h3>DEEP LEARNING AI</h3>
+          <h3 class="certificate-title">DEEP LEARNING AI</h3>
           <p>Stanford University (2025)</p>
         </div>
       </div>
@@ -425,6 +425,13 @@ import { Icon } from "astro-icon/components";
     object-fit: cover;
   }
 
+  .certificate-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+
   .certificate-overlay {
     position: absolute;
     bottom: 0;
@@ -439,13 +446,6 @@ import { Icon } from "astro-icon/components";
 
   .certificate-item:hover .certificate-overlay {
     transform: translateY(0);
-  }
-
-  .certificate-overlay h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
   }
 
   .certificate-overlay p {
