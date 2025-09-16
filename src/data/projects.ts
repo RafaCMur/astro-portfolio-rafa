@@ -11,6 +11,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "moneyboard",
+    title: "MoneyBoard",
+    description:
+      "Budgeting app that helps you manage your expenses and track your income.",
+    image: "/images/projects/moneyboard-mockDrop-iMac.jpg",
+    demoUrl: "https://moneyboard-website.vercel.app/",
+    featured: true,
+    status: "completed",
+  },
+  {
     id: "aurux-design",
     title: "My Web Design Agency",
     description:
@@ -64,15 +74,6 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/RafaCMur/auth-screens-react-native",
     demoUrl:
       "https://drive.google.com/drive/folders/1vd-xsVqwOO-rSTbotLDocccvpFipFFTS?usp=drive_link",
-    featured: true,
-    status: "completed",
-  },
-  {
-    id: "task-manager",
-    title: "Task Manager App",
-    description:
-      "Full-stack task management application with real-time updates and team collaboration features.",
-    image: "https://placehold.co/600x400/2563eb/93c5fd?text=TASK+MANAGER",
     featured: true,
     status: "completed",
   },
