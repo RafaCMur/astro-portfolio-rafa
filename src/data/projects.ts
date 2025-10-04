@@ -16,7 +16,7 @@ export const projects: Project[] = [
     description:
       "Budgeting app that helps you manage your expenses and track your income.",
     image: "/images/projects/moneyboard-mockDrop-iMac.jpg",
-    demoUrl: "https://moneyboard-website.vercel.app/",
+    demoUrl: "https://moneyboard.seltore.com/",
     featured: true,
     status: "completed",
   },
