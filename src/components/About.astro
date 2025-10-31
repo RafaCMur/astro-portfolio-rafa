@@ -28,59 +28,57 @@
       <cite class="quote-author">— Rafa Cabanillas</cite>
     </div>
 
-    <!-- Vision and Mission Section -->
-    <div class="vision-mission-container flex-row flex-wrap gap-3 mt-5">
-      <div class="vision-section flex-col">
-        <h2 class="section-title">Vision</h2>
+    <!-- Leadership Section -->
+    <div class="leadership-section flex-row flex-wrap align-center gap-3 mt-5">
+      <div class="flex-col">
+        <h2 class="section-title">Inspirational Leadership</h2>
         <p class="section-text">
-          My vision is to create deluxe websites for ambitious individuals and
-          businesses who truly want to stand out and achieve real success. I am
-          dedicated to helping my clients differentiate themselves and attract
-          more customers by delivering exceptional web experiences that elevate
-          their brand and drive tangible results.
-        </p>
-      </div>
-
-      <div class="mission-section flex-col">
-        <h2 class="section-title">Mission</h2>
-        <p class="section-text">
-          My mission is to design and develop standout websites that help
-          ambitious people and brands become unforgettable in their market. I
-          turn bold ideas into digital realities, creating online experiences
-          that not only impress, but attract the right clients and drive real
-          growth.
+          Rafa Cabanillas is a React focused frontend developer who builds fast,
+          usable products that drive <strong>real business results </strong>. He
+          is passionate about creating innovative and user-friendly experiences
+          that help businesses succeed.
         </p>
       </div>
     </div>
 
-    <!-- Leadership Section -->
-    <div class="leadership-section flex-row flex-wrap align-center gap-3 mt-5">
-      <div class="leadership-image">
+    <!-- Vision and Mission Section -->
+    <div class="vision-mission-section flex-row gap-3 mt-2">
+      <div class="leader-photo-parent flex-row align-center">
         <img
-          src="/images/code-in-macbook-screen.jpg"
+          src="/images/rafa-square-photo.png"
           alt="Rafa Cabanillas - Frontend Developer"
           class="leader-photo"
         />
       </div>
-      <div class="leadership-content flex-col">
-        <h2 class="section-title">Inspirational Leadership</h2>
-        <p class="section-text">
-          Rafa Cabanillas is a frontend developer specialized in React and
-          modern web technologies, with a strong focus on creating high-quality
-          digital experiences. He helps clients and teams stand out in a
-          competitive market by delivering software that makes a real difference
-          for users and for business growth. Passionate about continuous
-          learning and international collaboration, Rafa is always looking for
-          new ways to innovate and contribute to the success of every project.
-        </p>
+      <div class="vision-mission-text flex-col">
+        <div class="vision-section flex-col">
+          <h2 class="section-title">Vision</h2>
+          <p class="section-text">
+            I help ambitious teams ship React products that load fast, look
+            sharp, and convert. Stand-out software that wins customers and moves
+            metrics. High-impact frontends that boost revenue, not just
+            pageviews.
+          </p>
+        </div>
+
+        <div class="mission-section flex-col mt-2">
+          <h2 class="section-title">Mission</h2>
+          <p class="section-text">
+            My mission is to help ambitious people and brands become <strong
+              >unforgettable in their market</strong
+            >. I turn ideas into digital realities, creating online experiences
+            that not only impress, but attract the right clients and drive real
+            growth.
+          </p>
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- Call to Action -->
-    <div class="cta-section mt-5">
-      <h2 class="cta-title">COLLABORATE WITH ME!</h2>
-      <a href="projects" class="cta-button">DISCOVER MY PROJECTS</a>
-    </div>
+  <!-- Call to Action -->
+  <div class="cta-section mt-5">
+    <h2 class="cta-title">COLLABORATE WITH ME!</h2>
+    <a href="projects" class="cta-button">DISCOVER MY PROJECTS</a>
   </div>
 
   <!-- Gallery Section -->
@@ -174,7 +172,9 @@
 
   /* Content Section */
   .about-content {
-    padding-top: 4rem;
+    margin: 0 auto;
+    padding: 4rem 2rem 0 2rem;
+    max-width: 1000px;
     width: 100%;
   }
 
@@ -205,28 +205,20 @@
   }
 
   /* Vision and Mission */
-  .vision-mission-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    justify-content: space-between;
-  }
 
   .vision-section {
     flex: 1;
-    min-width: 300px;
-    padding: 2rem 2rem 2rem 0;
   }
   .mission-section {
     flex: 1;
-    min-width: 300px;
-    padding: 2rem 0 2rem 2rem;
   }
 
   .section-title {
+    text-align: left;
     font-size: 1.8rem;
     font-weight: var(--font-bold);
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0.05em;
   }
@@ -240,29 +232,22 @@
 
   /* Leadership Section */
   .leadership-section {
-    max-width: 1000px;
-    margin: 0 auto;
     align-items: center;
     justify-content: space-between;
   }
 
-  .leadership-image {
-    flex: 0 0 350px;
-    max-width: 350px;
+  .leader-photo-parent {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .leader-photo {
     width: 100%;
-    height: 280px;
+    height: auto;
     object-fit: cover;
     border-radius: 0.5rem;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  }
-
-  .leadership-content {
-    flex: 1;
-    padding: 2rem;
-    min-width: 300px;
   }
 
   /* Call to Action */
@@ -271,11 +256,10 @@
     padding: 4rem 2rem;
     background: linear-gradient(
       135deg,
-      rgba(0, 124, 240, 0.1),
-      rgba(0, 223, 216, 0.1)
+      rgba(0, 124, 240, 0.2),
+      rgba(0, 223, 216, 0.2)
     );
     border-radius: 1rem;
-    margin: 2rem 0;
   }
 
   .cta-title {
@@ -311,7 +295,7 @@
   /* Gallery Section */
   .gallery-section {
     max-width: 1280px;
-    margin: 4rem auto 5rem auto;
+    margin: 5rem auto 5rem auto;
     width: 100%;
     padding: 0 2rem;
   }
@@ -392,28 +376,15 @@
       font-size: 1.4rem;
     }
 
-    .vision-mission-container {
-      flex-direction: column;
-    }
-
-    .vision-section {
-      padding: 2rem;
-    }
-
-    .mission-section {
-      padding: 2rem;
-    }
-
     .leadership-section {
       flex-direction: column;
       text-align: center;
+      padding: 0 1rem;
     }
 
-    .leadership-image {
-      flex: none;
-      margin-bottom: 2rem;
-      max-width: 280px;
-      margin: 0 auto 2rem auto;
+    .vision-mission-section {
+      flex-direction: column;
+      padding: 0 1rem;
     }
 
     .leader-photo {

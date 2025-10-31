@@ -5,7 +5,7 @@
 export const GITHUB_URL = "https://github.com/RafaCMur";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/rafael-cabanillas/";
 export const RESUME_URL =
-  "https://www.canva.com/design/DAGYuSrIQVI/jXLUnCl_nhNqGOauS7w6oQ/view?utm_content=DAGYuSrIQVI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he20595df8b";
+  "https://docs.google.com/presentation/d/1OtyxNmo_i8BrL1odaXC37mncS4i8i2nA5zkjht_6jTM/edit?usp=sharing";
 export const EMAIL = "rafacabanillasm@gmail.com";
 export const PHONE = "+34 640 12 61 15";
 export const ADDRESS = "Quintana de la Serena, Spain";
