@@ -67,45 +67,39 @@ import { Icon } from "astro-icon/components";
         <div class="timeline-marker"></div>
         <div class="timeline-content">
           <div class="timeline-period">May 2024 - Present</div>
-          <h3 class="position-title">
-            UST - Application Support Engineer
+          <a
+            class="position-title"
+            href="https://ust.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            UST - L3 Support Engineer
             <Icon class="external-link" name="arrow-up-right" size="1.2rem" />
-          </h3>
+          </a>
           <div class="company-info">
             <p class="company-description">
-              Level 2–3 application support in a multinational (35k+ employees).
-              Managed incidents with <strong>ServiceNow</strong>, ensured <strong
-                >SLA compliance</strong
-              >, and partnered with dev teams. Worked with <strong
-                >Azure DevOps</strong
-              >
-              (<strong>Pipelines</strong>, <strong>Repos</strong>, <strong
-                >CI/CD</strong
-              >) in a cloud environment, contributing to <strong
-                >React/Redux</strong
-              > bug fixing and backend troubleshooting for <strong
-                >REST APIs</strong
-              > and <strong>SQL (PostgreSQL)</strong>.
+              L3 support for a global staffing leader across multiple EU
+              countries.
             </p>
             <ul class="achievement">
               <li>
-                Took ownership of unassigned tickets to reduce backlog and speed
-                up resolutions.
+                Resolved 100 % of incidents on time (never missed a deadline)
               </li>
               <li>
-                Applied <strong>Git</strong> workflows (branching/merging) and <strong
-                  >root cause analysis</strong
-                > on recurring issues.
+                Managed high priority Incidents that affected a company of
+                35.000+ employees.
+              </li>
+              <li>
+                97 % of Azure support tickets closed before deadline with
+                corresponding testing.
               </li>
             </ul>
           </div>
           <div class="tech-stack">
-            <span class="tech-pill">ServiceNow</span>
             <span class="tech-pill">Azure DevOps</span>
             <span class="tech-pill">Pipelines</span>
             <span class="tech-pill">CI/CD</span>
             <span class="tech-pill">React</span>
-            <span class="tech-pill">Redux</span>
             <span class="tech-pill">REST</span>
             <span class="tech-pill">PostgreSQL</span>
             <span class="tech-pill">Git</span>
@@ -118,10 +112,15 @@ import { Icon } from "astro-icon/components";
         <div class="timeline-marker"></div>
         <div class="timeline-content">
           <div class="timeline-period">Sep 2023 - Present</div>
-          <h3 class="position-title">
+          <a
+            class="position-title"
+            href="https://seltore.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             SELTORE LLC - Software Developer / Freelancer
             <Icon class="external-link" name="arrow-up-right" size="1.2rem" />
-          </h3>
+          </a>
           <div class="company-info">
             <p class="company-description">
               I build end-to-end products for clients and personal ventures,
@@ -138,11 +137,6 @@ import { Icon } from "astro-icon/components";
               <li>
                 <strong>True Resonance</strong> (Chrome Extension): real-time audio
                 pitch shifting (432/528 Hz) with custom UI.
-              </li>
-              <li>
-                <strong>React Native</strong> app with <strong
-                  >Firebase auth</strong
-                > and React admin dashboard for content/user management.
               </li>
               <li>
                 <strong>Trading bot</strong> (Python + <strong
@@ -170,10 +164,15 @@ import { Icon } from "astro-icon/components";
         <div class="timeline-marker"></div>
         <div class="timeline-content">
           <div class="timeline-period">Aug 2023 - Aug 2024</div>
-          <h3 class="position-title">
-            Mobbeel Solutions SL - Front-End Developer
+          <a
+            class="position-title"
+            href="https://www.mobbeel.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Mobbeel Solutions SL - Frontend Developer
             <Icon class="external-link" name="arrow-up-right" size="1.2rem" />
-          </h3>
+          </a>
           <div class="company-info">
             <p class="company-description">
               Contributed to <strong>7+ enterprise projects</strong> for top-tier
@@ -215,10 +214,15 @@ import { Icon } from "astro-icon/components";
         <div class="timeline-marker"></div>
         <div class="timeline-content">
           <div class="timeline-period">Nov 2021 - Mar 2022</div>
-          <h3 class="position-title">
-            Wa.Works - Frontend Developer (Bergen, Norway)
+          <a
+            class="position-title"
+            href="https://thehub.io/startups/waworks"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Wa.Works - React Developer (Bergen, Norway)
             <Icon class="external-link" name="arrow-up-right" size="1.2rem" />
-          </h3>
+          </a>
           <div class="company-info">
             <p class="company-description">
               React development in an international team (Norway). Delivered
@@ -229,10 +233,8 @@ import { Icon } from "astro-icon/components";
               standards.
             </p>
             <ul class="achievement">
-              <li>
-                Presented the final project to the CEO and supported teammates
-                via mentoring & pair programming.
-              </li>
+              <li>Presented the final project to the CEO</li>
+              <li>Supported teammates via mentoring & pair programming</li>
             </ul>
           </div>
           <div class="tech-stack">
@@ -460,6 +462,11 @@ import { Icon } from "astro-icon/components";
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .position-title:hover {
+      color: var(--primary-color);
     }
 
     .external-link {
@@ -470,6 +477,7 @@ import { Icon } from "astro-icon/components";
 
     .position-title:hover .external-link {
       opacity: 1;
+      transform: translate(2px, -3px);
     }
 
     .company-info {
