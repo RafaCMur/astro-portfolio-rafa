@@ -3,27 +3,29 @@
 ---
 
 <section id="welcome">
-  <div class="section-content">
-    <div class="welcome-section">
-      <div class="welcome-orb welcome-orb-left"></div>
-      <div class="welcome-orb welcome-orb-right"></div>
-      <h1 class="welcome-title gradient-text">WELCOME TO MY DIGITAL OCEAN</h1>
-      <p class="welcome-subtitle">
-        Frontend Developer specialized in creating exceptional web experiences
-        that combine design and performance
-      </p>
-      <div class="stats-highlight">
-        <div class="stat-item">
-          <span class="big-number">+10</span>
-          <span class="stats-label">PROJECTS COMPLETED</span>
-        </div>
-        <div class="stat-item">
-          <span class="big-number">1K+</span>
-          <span class="stats-label">USERS ON A LIVE PRODUCT</span>
-        </div>
-        <div class="stat-item">
-          <span class="big-number">100%</span>
-          <span class="stats-label">ON TIME DELIVERY</span>
+  <div class="welcome-section">
+    <div class="welcome-orb welcome-orb-left"></div>
+    <div class="welcome-orb welcome-orb-right"></div>
+    <div class="section-content">
+      <div class="welcome-content">
+        <h1 class="welcome-title gradient-text">WELCOME TO MY DIGITAL OCEAN</h1>
+        <p class="welcome-subtitle">
+          Frontend Developer specialized in creating exceptional web experiences
+          that combine design and performance
+        </p>
+        <div class="stats-highlight">
+          <div class="stat-item">
+            <span class="big-number">+10</span>
+            <span class="stats-label">PROJECTS COMPLETED</span>
+          </div>
+          <div class="stat-item">
+            <span class="big-number">1K+</span>
+            <span class="stats-label">USERS ON A LIVE PRODUCT</span>
+          </div>
+          <div class="stat-item">
+            <span class="big-number">100%</span>
+            <span class="stats-label">ON TIME DELIVERY</span>
+          </div>
         </div>
       </div>
     </div>
@@ -44,12 +46,17 @@
 
   .welcome-section {
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     text-align: center;
     padding-top: 5rem;
     padding-bottom: var(--welcome-bottom-space);
     margin-bottom: 0;
     isolation: isolate;
+  }
+
+  .welcome-content {
+    position: relative;
+    z-index: 1;
   }
 
   .welcome-orb {
@@ -102,8 +109,6 @@
   .welcome-title,
   .welcome-subtitle,
   .stats-highlight {
-    position: relative;
-    z-index: 1;
     opacity: 0;
     transform: translateY(28px) scale(0.985);
     filter: blur(10px);
