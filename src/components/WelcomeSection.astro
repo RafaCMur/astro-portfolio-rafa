@@ -4,18 +4,15 @@
 
 <section id="welcome">
   <div class="section-content">
-    <div class="welcome-section" data-animate-root>
+    <div class="welcome-section">
       <div class="welcome-orb welcome-orb-left"></div>
       <div class="welcome-orb welcome-orb-right"></div>
-      <div class="welcome-grid"></div>
-      <h1 class="welcome-title gradient-text" data-animate-item="title">
-        WELCOME TO MY DIGITAL OCEAN
-      </h1>
-      <p class="welcome-subtitle" data-animate-item="subtitle">
+      <h1 class="welcome-title gradient-text">WELCOME TO MY DIGITAL OCEAN</h1>
+      <p class="welcome-subtitle">
         Frontend Developer specialized in creating exceptional web experiences
         that combine design and performance
       </p>
-      <div class="stats-highlight" data-animate-item="stats">
+      <div class="stats-highlight">
         <span class="big-number">+10</span>
         <span class="stats-label"
           >PROJECTS COMPLETED<br />EXPERIENCE AS FREELANCE</span
@@ -27,6 +24,9 @@
 
 <style>
   #welcome {
+    --welcome-bottom-space: clamp(5.5rem, 9vw, 8.5rem);
+    --welcome-orb-right-offset: clamp(4rem, 8vw, 6.5rem);
+    --welcome-orb-left-top: clamp(3.5rem, 6vw, 5.5rem);
     border-radius: 2rem 2rem 0 0;
     position: relative;
     z-index: 2;
@@ -39,56 +39,48 @@
     overflow: hidden;
     text-align: center;
     padding-top: 5rem;
-    padding-bottom: 3rem;
-    margin-bottom: 3rem;
+    padding-bottom: var(--welcome-bottom-space);
+    margin-bottom: 0;
     isolation: isolate;
   }
 
-  .welcome-grid,
   .welcome-orb {
     position: absolute;
     pointer-events: none;
-  }
-
-  .welcome-grid {
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(94, 232, 232, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(94, 232, 232, 0.08) 1px, transparent 1px);
-    background-size: 42px 42px;
-    mask-image: radial-gradient(circle at center, black 35%, transparent 78%);
-    opacity: 0.45;
-    transform: translateY(18px) scale(1.02);
-    transition:
-      opacity 800ms ease,
-      transform 900ms ease;
-    z-index: -3;
   }
 
   .welcome-orb {
     width: 18rem;
     height: 18rem;
     border-radius: 9999px;
-    filter: blur(60px);
-    opacity: 0.22;
-    transition:
-      transform 900ms ease,
-      opacity 900ms ease;
+    filter: blur(28px);
+    opacity: 0;
     z-index: -2;
+    animation-duration: 1100ms, 6.5s;
+    animation-timing-function: ease, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: forwards, both;
+    will-change: transform;
   }
 
   .welcome-orb-left {
-    top: 1rem;
+    top: var(--welcome-orb-left-top);
     left: 8%;
     background: rgba(94, 232, 232, 0.7);
     transform: translate3d(-24px, 12px, 0) scale(0.9);
+    animation-name: orbRevealLeft, orbFloatLeft;
+    animation-delay: 180ms, 1200ms;
   }
 
   .welcome-orb-right {
     right: 10%;
-    bottom: 0;
+    bottom: var(--welcome-orb-right-offset);
     background: rgba(59, 130, 246, 0.6);
     transform: translate3d(24px, -12px, 0) scale(0.92);
+    animation-name: orbRevealRight, orbFloatRight;
+    animation-delay: 260ms, 1000ms;
+    animation-duration: 1200ms, 5.5s;
   }
 
   .welcome-title {
@@ -107,14 +99,11 @@
     opacity: 0;
     transform: translateY(28px) scale(0.985);
     filter: blur(10px);
-    transition:
-      opacity 650ms ease,
-      transform 650ms ease,
-      filter 650ms ease;
+    animation: contentReveal 700ms ease forwards;
   }
 
   .welcome-title {
-    transition-delay: 80ms;
+    animation-delay: 120ms;
   }
 
   .welcome-subtitle {
@@ -123,7 +112,7 @@
     max-width: 600px;
     margin: 0 auto 3rem auto;
     line-height: 1.6;
-    transition-delay: 180ms;
+    animation-delay: 240ms;
   }
 
   .stats-highlight {
@@ -131,26 +120,73 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    transition-delay: 280ms;
+    animation-delay: 360ms;
   }
 
-  .welcome-section.is-visible .welcome-title,
-  .welcome-section.is-visible .welcome-subtitle,
-  .welcome-section.is-visible .stats-highlight {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
+  @keyframes contentReveal {
+    0% {
+      opacity: 0;
+      transform: translateY(28px) scale(0.985);
+      filter: blur(10px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
   }
 
-  .welcome-section.is-visible .welcome-grid {
-    opacity: 0.7;
-    transform: translateY(0) scale(1);
+  @keyframes orbRevealLeft {
+    0% {
+      opacity: 0;
+      transform: translate3d(-48px, 18px, 0) scale(0.82);
+    }
+
+    100% {
+      opacity: 0.34;
+      transform: translate3d(-18px, 10px, 0) scale(0.94);
+    }
   }
 
-  .welcome-section.is-visible .welcome-orb-left,
-  .welcome-section.is-visible .welcome-orb-right {
-    opacity: 0.34;
-    transform: translate3d(0, 0, 0) scale(1);
+  @keyframes orbRevealRight {
+    0% {
+      opacity: 0;
+      transform: translate3d(48px, -18px, 0) scale(0.84);
+    }
+
+    100% {
+      opacity: 0.34;
+      transform: translate3d(18px, -10px, 0) scale(0.95);
+    }
+  }
+
+  @keyframes orbFloatLeft {
+    0% {
+      transform: translate3d(-56px, 28px, 0) scale(0.9);
+    }
+
+    50% {
+      transform: translate3d(12px, -28px, 0) scale(1.03);
+    }
+
+    100% {
+      transform: translate3d(56px, -38px, 0) scale(1.08);
+    }
+  }
+
+  @keyframes orbFloatRight {
+    0% {
+      transform: translate3d(44px, -28px, 0) scale(0.91);
+    }
+
+    50% {
+      transform: translate3d(-12px, 14px, 0) scale(1.02);
+    }
+
+    100% {
+      transform: translate3d(-48px, 34px, 0) scale(1.07);
+    }
   }
 
   .big-number {
@@ -170,22 +206,11 @@
     line-height: 1.4;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .welcome-title,
-    .welcome-subtitle,
-    .stats-highlight,
-    .welcome-grid,
-    .welcome-orb {
-      opacity: 1;
-      transform: none;
-      filter: none;
-      transition: none;
-    }
-  }
-
   @media (max-width: 768px) {
-    .welcome-section {
-      padding-bottom: 2rem;
+    #welcome {
+      --welcome-bottom-space: clamp(4.5rem, 14vw, 6rem);
+      --welcome-orb-right-offset: clamp(3.25rem, 11vw, 5rem);
+      --welcome-orb-left-top: clamp(4rem, 10vw, 5.25rem);
     }
 
     .welcome-title {
@@ -204,34 +229,7 @@
     .welcome-orb {
       width: 12rem;
       height: 12rem;
-      filter: blur(40px);
+      filter: blur(22px);
     }
   }
 </style>
-
-<script>
-  const root = document.querySelector("[data-animate-root]");
-
-  if (root instanceof HTMLElement) {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    if (mediaQuery.matches) {
-      root.classList.add("is-visible");
-    } else {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          for (const entry of entries) {
-            if (entry.isIntersecting) {
-              root.classList.add("is-visible");
-              observer.disconnect();
-              break;
-            }
-          }
-        },
-        { threshold: 0.35 },
-      );
-
-      observer.observe(root);
-    }
-  }
-</script>
