@@ -13,10 +13,18 @@
         that combine design and performance
       </p>
       <div class="stats-highlight">
-        <span class="big-number">+10</span>
-        <span class="stats-label"
-          >PROJECTS COMPLETED<br />EXPERIENCE AS FREELANCE</span
-        >
+        <div class="stat-item">
+          <span class="big-number">+10</span>
+          <span class="stats-label">PROJECTS COMPLETED</span>
+        </div>
+        <div class="stat-item">
+          <span class="big-number">1K+</span>
+          <span class="stats-label">USERS ON A LIVE PRODUCT</span>
+        </div>
+        <div class="stat-item">
+          <span class="big-number">0</span>
+          <span class="stats-label">MISSED DEADLINES</span>
+        </div>
       </div>
     </div>
   </div>
@@ -116,11 +124,21 @@
   }
 
   .stats-highlight {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+    max-width: 900px;
+    margin: 0 auto;
+    animation-delay: 360ms;
+  }
+
+  .stat-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    animation-delay: 360ms;
+    gap: 0.6rem;
+    padding: 1.25rem 1rem;
   }
 
   @keyframes contentReveal {
@@ -204,6 +222,7 @@
     letter-spacing: 0.05em;
     text-align: center;
     line-height: 1.4;
+    max-width: 16ch;
   }
 
   @media (max-width: 768px) {
@@ -219,6 +238,16 @@
 
     .big-number {
       font-size: 3rem;
+    }
+
+    .stats-highlight {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      max-width: 320px;
+    }
+
+    .stat-item {
+      padding: 0.75rem 0;
     }
 
     .welcome-subtitle {
