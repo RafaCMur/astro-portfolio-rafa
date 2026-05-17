@@ -43,7 +43,19 @@ import { TRUE_RESONANCE_PLAY_STORE_URL } from "../consts";
     z-index: 4;
   }
 
+  #true-resonance-banner::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -5rem;
+    height: 5rem;
+    background: linear-gradient(to bottom, rgba(11, 18, 44, 0), var(--background-dark, #0a0a0f));
+    pointer-events: none;
+  }
+
   .banner-inner {
+    position: relative;
     max-width: 900px;
     margin: 0 auto;
     padding: 0 1.5rem;

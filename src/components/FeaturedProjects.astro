@@ -19,4 +19,15 @@ const featuredProjects = getFeaturedProjects();
     margin-bottom: -1rem;
     padding: 5rem 0 3rem;
   }
+
+  #featured-projects::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -4rem;
+    height: 4rem;
+    background: linear-gradient(to bottom, rgba(10, 10, 15, 0), var(--background-light));
+    pointer-events: none;
+  }
 </style>
