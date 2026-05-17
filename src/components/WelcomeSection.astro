@@ -22,7 +22,7 @@
             <span class="stats-label">PROJECTS COMPLETED</span>
           </div>
           <div class="stat-item">
-            <div class="big-number stat-number" data-target="1000" data-format="compact" data-suffix="+">
+            <div class="big-number stat-number" data-target="5000" data-format="compact" data-suffix="+">
               <span class="stat-value">0</span>
               <span class="stat-suffix" aria-hidden="true">+</span>
             </div>
@@ -294,25 +294,26 @@
 </style>
 
 <script>
-  const statNumbers = document.querySelectorAll<HTMLElement>(".stat-number[data-target]");
-
   const formatCompactNumber = (value: number) => {
     if (value >= 1000) {
       return `${Math.round(value / 1000)}K`;
     }
-
     return String(value);
   };
 
   const animateCounter = (statNumber: HTMLElement) => {
     const valueElement = statNumber.querySelector(".stat-value");
-
     if (!valueElement) return;
 
     const target = Number(statNumber.dataset.target ?? "0");
     const duration = 1400;
-    const formatValue = statNumber.dataset.format === "compact" ? formatCompactNumber : (value: number) => String(value);
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const formatValue =
+      statNumber.dataset.format === "compact"
+        ? formatCompactNumber
+        : (value: number) => String(value);
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
     if (prefersReducedMotion) {
       valueElement.textContent = formatValue(target);
@@ -325,28 +326,29 @@
       const progress = Math.min((currentTime - startTime) / duration, 1);
       const easedProgress = 1 - Math.pow(1 - progress, 3);
       const currentValue = Math.round(target * easedProgress);
-
       valueElement.textContent = formatValue(currentValue);
-
-      if (progress < 1) {
-        requestAnimationFrame(tick);
-      }
+      if (progress < 1) requestAnimationFrame(tick);
     };
 
     requestAnimationFrame(tick);
   };
 
-  const observer = new IntersectionObserver(
-    (entries, intersectionObserver) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
+  document.addEventListener("DOMContentLoaded", () => {
+    const statNumbers = document.querySelectorAll<HTMLElement>(
+      ".stat-number[data-target]",
+    );
 
-        animateCounter(entry.target as HTMLElement);
-        intersectionObserver.unobserve(entry.target);
-      });
-    },
-    { threshold: 0.45 },
-  );
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          animateCounter(entry.target as HTMLElement);
+          obs.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.2 },
+    );
 
-  statNumbers.forEach((statNumber) => observer.observe(statNumber));
+    statNumbers.forEach((el) => observer.observe(el));
+  });
 </script>
