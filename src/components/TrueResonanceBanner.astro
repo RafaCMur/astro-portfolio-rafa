@@ -2,10 +2,8 @@
 import { TRUE_RESONANCE_PLAY_STORE_URL } from "../consts";
 ---
 
-<section id="true-resonance-banner">
+<div id="true-resonance-banner">
   <div class="banner-inner">
-    <p class="featured-label">FEATURED PROJECTS</p>
-
     <a href={TRUE_RESONANCE_PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
       <img
         class="banner-image"
@@ -33,29 +31,16 @@ import { TRUE_RESONANCE_PLAY_STORE_URL } from "../consts";
       </a>
     </div>
   </div>
-</section>
+</div>
 
 <style>
   #true-resonance-banner {
-    background: var(--background-dark, #0a0a0f);
-    padding: 5rem 0 7rem;
     position: relative;
-    z-index: 4;
-  }
-
-  #true-resonance-banner::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -5rem;
-    height: 5rem;
-    background: linear-gradient(to bottom, rgba(11, 18, 44, 0), var(--background-dark, #0a0a0f));
-    pointer-events: none;
   }
 
   .banner-inner {
     position: relative;
+    z-index: 1;
     max-width: 900px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -64,16 +49,6 @@ import { TRUE_RESONANCE_PLAY_STORE_URL } from "../consts";
     align-items: center;
     gap: 1.5rem;
     text-align: center;
-  }
-
-  .featured-label {
-    font-size: clamp(1.55rem, 3.4vw, 2.6rem);
-    font-weight: var(--font-bold);
-    letter-spacing: 0.08em;
-    color: var(--white);
-    text-transform: uppercase;
-    margin: 0 0 0.5rem;
-    font-family: "Montserrat", sans-serif;
   }
 
   .banner-image {
