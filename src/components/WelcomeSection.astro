@@ -16,21 +16,21 @@
         <div class="stats-highlight">
           <div class="stat-item">
             <div class="big-number">
-              <span class="stat-value" data-target="10">10</span>
+              <span class="stat-value">10</span>
               <span class="stat-suffix" aria-hidden="true">+</span>
             </div>
             <span class="stats-label">PROJECTS COMPLETED</span>
           </div>
           <div class="stat-item">
             <div class="big-number">
-              <span class="stat-value" data-target="5000">5000</span>
+              <span class="stat-value">5000</span>
               <span class="stat-suffix" aria-hidden="true">+</span>
             </div>
             <span class="stats-label">USERS ON A LIVE PRODUCT</span>
           </div>
           <div class="stat-item">
             <div class="big-number">
-              <span class="stat-value" data-target="100">100</span>
+              <span class="stat-value">100</span>
               <span class="stat-suffix" aria-hidden="true">%</span>
             </div>
             <span class="stats-label">ON TIME DELIVERY</span>
@@ -298,45 +298,4 @@
   }
 </style>
 
-<script>
-  const DURATION = 3000;
-
-  function easeInOutCubic(t: number): number {
-    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-  }
-
-  function animateCounter(el: HTMLElement, target: number) {
-    const start = performance.now();
-    function tick(now: number) {
-      const progress = Math.min((now - start) / DURATION, 1);
-      el.textContent = String(Math.round(easeInOutCubic(progress) * target));
-      if (progress < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target as HTMLElement;
-        const target = Number(el.dataset.target);
-        observer.unobserve(el);
-        if (prefersReducedMotion) {
-          el.textContent = String(target);
-        } else {
-          animateCounter(el, target);
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-
-  document.querySelectorAll<HTMLElement>(".stat-value[data-target]").forEach((el) => {
-    el.textContent = "0";
-    observer.observe(el);
-  });
-</script>
 
