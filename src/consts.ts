@@ -9,3 +9,6 @@ export const RESUME_URL =
 export const EMAIL = "rafacabanillasm@gmail.com";
 export const PHONE = "+34 640 12 61 15";
 export const ADDRESS = "Quintana de la Serena, Spain";
+// TODO: make the locale en-US dynamic (also es-ES) when internationalization is implemented.
+export const TRUE_RESONANCE_PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.trueresonance.player&hl=en_US";
