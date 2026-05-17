@@ -15,15 +15,24 @@
         </p>
         <div class="stats-highlight">
           <div class="stat-item">
-            <span class="big-number">+10</span>
+            <div class="big-number stat-number" data-target="10" data-prefix="+">
+              <span class="stat-prefix" aria-hidden="true">+</span>
+              <span class="stat-value">0</span>
+            </div>
             <span class="stats-label">PROJECTS COMPLETED</span>
           </div>
           <div class="stat-item">
-            <span class="big-number">5K+</span>
+            <div class="big-number stat-number" data-target="1000" data-format="compact" data-suffix="+">
+              <span class="stat-value">0</span>
+              <span class="stat-suffix" aria-hidden="true">+</span>
+            </div>
             <span class="stats-label">USERS ON A LIVE PRODUCT</span>
           </div>
           <div class="stat-item">
-            <span class="big-number">100%</span>
+            <div class="big-number stat-number" data-target="100" data-suffix="%">
+              <span class="stat-value">0</span>
+              <span class="stat-suffix" aria-hidden="true">%</span>
+            </div>
             <span class="stats-label">ON TIME DELIVERY</span>
           </div>
         </div>
@@ -213,11 +222,27 @@
   }
 
   .big-number {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.08em;
     font-size: 4rem;
     font-weight: var(--font-bold);
     color: var(--primary-color);
     font-family: "Montserrat", sans-serif;
     text-shadow: 0 0 24px rgba(94, 232, 232, 0.2);
+  }
+
+  .stat-prefix,
+  .stat-suffix {
+    font-size: 0.6em;
+    line-height: 1;
+    transform: translateY(0.1em);
+  }
+
+  .stat-value {
+    min-width: 2ch;
+    text-align: center;
   }
 
   .stats-label {
@@ -267,3 +292,61 @@
     }
   }
 </style>
+
+<script>
+  const statNumbers = document.querySelectorAll<HTMLElement>(".stat-number[data-target]");
+
+  const formatCompactNumber = (value: number) => {
+    if (value >= 1000) {
+      return `${Math.round(value / 1000)}K`;
+    }
+
+    return String(value);
+  };
+
+  const animateCounter = (statNumber: HTMLElement) => {
+    const valueElement = statNumber.querySelector(".stat-value");
+
+    if (!valueElement) return;
+
+    const target = Number(statNumber.dataset.target ?? "0");
+    const duration = 1400;
+    const formatValue = statNumber.dataset.format === "compact" ? formatCompactNumber : (value: number) => String(value);
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReducedMotion) {
+      valueElement.textContent = formatValue(target);
+      return;
+    }
+
+    const startTime = performance.now();
+
+    const tick = (currentTime: number) => {
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      const currentValue = Math.round(target * easedProgress);
+
+      valueElement.textContent = formatValue(currentValue);
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      }
+    };
+
+    requestAnimationFrame(tick);
+  };
+
+  const observer = new IntersectionObserver(
+    (entries, intersectionObserver) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        animateCounter(entry.target as HTMLElement);
+        intersectionObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.45 },
+  );
+
+  statNumbers.forEach((statNumber) => observer.observe(statNumber));
+</script>
