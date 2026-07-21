@@ -20,17 +20,18 @@ export const projects: Project[] = [
     featured: true,
     status: "completed",
   },
-  {
-    id: "aurux-design",
-    title: "My Web Design Agency",
-    description:
-      "Complete e-commerce platform with Next.js, Stripe payment integration and admin panel. Responsive and modern design.",
-    image: "/images/projects/aurux-design-hero.jpg",
-    codeUrl: "",
-    demoUrl: "https://auruxdesign.com/",
-    featured: true,
-    status: "completed",
-  },
+  // {
+  //   id: "aurux-design",
+  //   title: "My Web Design Agency",
+  //   description:
+  //     "Complete e-commerce platform with Next.js, Stripe payment integration and admin panel. Responsive and modern design.",
+  //   image: "/images/projects/aurux-design-hero.jpg",
+  //   codeUrl: "",
+  //   demoUrl: "https://auruxdesign.com/",
+  //   featured: true,
+  //   status: "completed",
+  // },
+  // TODO: May include Aurux Design in the future if we get real clients
   {
     id: "chrome-extension",
     title: "Music Chrome Extension",
