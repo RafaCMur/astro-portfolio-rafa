@@ -1,4 +1,4 @@
-# Indroduction
+# Introduction
 
 This is a project developed with Astro, a new static site generator. The project implements SSR, which is a feature that allows Astro to make API calls work. It also uses **nodemailer** and **supabase** for the contact form. The project is deployed in **Vercel**. This project uses **bun** as a package manager.
 
