@@ -3,16 +3,21 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 
-const { title } = Astro.props;
+const {
+  title,
+  description =
+    "Rafael Cabanillas is a Full-stack Product Engineer building web, mobile, desktop, and AI-powered automation products.",
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
     <title>{title}</title>
+    <meta name="description" content={description} />
   </head>
   <body>
     <Header />
