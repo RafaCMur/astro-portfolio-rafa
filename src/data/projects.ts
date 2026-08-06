@@ -14,7 +14,7 @@ export const projects: Project[] = [
     id: "moneyboard",
     title: "MoneyBoard",
     description:
-      "Budgeting app that helps you manage your expenses and track your income.",
+      "Finance tracking desktop application built with React, TypeScript, and Tauri, available in the Microsoft Store.",
     image: "/images/projects/moneyboard-mockDrop-iMac.jpg",
     demoUrl: "https://moneyboard.seltore.com/",
     featured: true,
@@ -28,17 +28,16 @@ export const projects: Project[] = [
     image: "/images/projects/aurux-design-hero.jpg",
     codeUrl: "",
     demoUrl: "https://auruxdesign.com/",
-    featured: true,
+    featured: false,
     status: "completed",
   },
   {
-    id: "chrome-extension",
-    title: "Music Chrome Extension",
+    id: "true-resonance",
+    title: "True Resonance",
     description:
-      "Chrome extension for musical tuning developed with React JS. Useful tool for musicians who need to tune their instruments quickly and accurately.",
+      "React Native mobile app and open-source Chrome extension for audio processing across Spotify, YouTube, and web players. 3,000+ active users and 7,000+ downloads.",
     image: "/images/projects/true-resonance-presentation-img.png",
-    demoUrl:
-      "https://chromewebstore.google.com/detail/true-resonance/fbjmobmlgofjclebagmnabejchajaifm",
+    demoUrl: "https://trueresonance.rafacmur.com/",
     codeUrl: "https://github.com/RafaCMur/true-resonance",
     featured: true,
     status: "completed",
@@ -52,7 +51,7 @@ export const projects: Project[] = [
     demoUrl:
       "https://marketplace.visualstudio.com/items?itemName=RafaCMur.retina",
     codeUrl: "https://github.com/RafaCMur/retina",
-    featured: true,
+    featured: false,
     status: "completed",
   },
   {
@@ -62,7 +61,7 @@ export const projects: Project[] = [
       "Modern portfolio website built with Astro, featuring responsive design and optimized performance.",
     image: "/images/projects/astro-portfolio-welcome-section.jpg",
     codeUrl: "https://github.com/RafaCMur/astro-portfolio-rafa",
-    featured: true,
+    featured: false,
     status: "completed",
   },
   {
@@ -74,7 +73,7 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/RafaCMur/auth-screens-react-native",
     demoUrl:
       "https://drive.google.com/drive/folders/1vd-xsVqwOO-rSTbotLDocccvpFipFFTS?usp=drive_link",
-    featured: true,
+    featured: false,
     status: "completed",
   },
 ];
