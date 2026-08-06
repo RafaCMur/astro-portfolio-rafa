@@ -28,7 +28,7 @@ export const projects: Project[] = [
     image: "/images/projects/aurux-design-hero.jpg",
     codeUrl: "",
     demoUrl: "https://auruxdesign.com/",
-    featured: false,
+    featured: true,
     status: "completed",
   },
   {
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     demoUrl:
       "https://marketplace.visualstudio.com/items?itemName=RafaCMur.retina",
     codeUrl: "https://github.com/RafaCMur/retina",
-    featured: false,
+    featured: true,
     status: "completed",
   },
   {
@@ -61,7 +61,7 @@ export const projects: Project[] = [
       "Modern portfolio website built with Astro, featuring responsive design and optimized performance.",
     image: "/images/projects/astro-portfolio-welcome-section.jpg",
     codeUrl: "https://github.com/RafaCMur/astro-portfolio-rafa",
-    featured: false,
+    featured: true,
     status: "completed",
   },
   {
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/RafaCMur/auth-screens-react-native",
     demoUrl:
       "https://drive.google.com/drive/folders/1vd-xsVqwOO-rSTbotLDocccvpFipFFTS?usp=drive_link",
-    featured: false,
+    featured: true,
     status: "completed",
   },
 ];
