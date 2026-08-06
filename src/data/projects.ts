@@ -20,6 +20,7 @@ export const projects: Project[] = [
     featured: true,
     status: "completed",
   },
+  /*
   {
     id: "aurux-design",
     title: "My Web Design Agency",
@@ -31,6 +32,7 @@ export const projects: Project[] = [
     featured: true,
     status: "completed",
   },
+  */
   {
     id: "true-resonance",
     title: "True Resonance",
