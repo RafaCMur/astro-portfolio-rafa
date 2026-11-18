@@ -25,7 +25,7 @@ export const projects: Project[] = [
     id: "navbench",
     title: "navbench",
     description:
-      "Compares the A* and RRT* path planners in PyRoboSim, with a web viewer that replays routes, plans live in the browser and runs a pick-and-place task. Python and JavaScript.",
+      "See how two simulated robots find their way around the same house using different methods. Replay their routes, choose a destination, or watch them pick up and move an object.",
     image: "/images/projects/navbench-robotics.png",
     codeUrl: "https://github.com/RafaCMur/navbench",
     demoUrl: "https://navbench.rafacmur.com",
