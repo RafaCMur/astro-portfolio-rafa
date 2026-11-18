@@ -11,6 +11,28 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "true-resonance",
+    title: "True Resonance",
+    description:
+      "React Native mobile app and open-source Chrome extension for audio processing across Spotify, YouTube, and web players. 3,000+ active users and 10,000+ downloads.",
+    image: "/images/projects/true-resonance-presentation-img.png",
+    demoUrl: "https://trueresonance.rafacmur.com/",
+    codeUrl: "https://github.com/RafaCMur/true-resonance",
+    featured: true,
+    status: "completed",
+  },
+  {
+    id: "navbench",
+    title: "navbench",
+    description:
+      "Compares the A* and RRT* path planners in PyRoboSim, with a web viewer that replays routes, plans live in the browser and runs a pick-and-place task. Python and JavaScript.",
+    image: "/images/projects/navbench-robotics.png",
+    codeUrl: "https://github.com/RafaCMur/navbench",
+    demoUrl: "https://navbench.rafacmur.com",
+    featured: true,
+    status: "completed",
+  },
+  {
     id: "moneyboard",
     title: "MoneyBoard",
     description:
@@ -33,17 +55,6 @@ export const projects: Project[] = [
     status: "completed",
   },
   */
-  {
-    id: "true-resonance",
-    title: "True Resonance",
-    description:
-      "React Native mobile app and open-source Chrome extension for audio processing across Spotify, YouTube, and web players. 3,000+ active users and 7,000+ downloads.",
-    image: "/images/projects/true-resonance-presentation-img.png",
-    demoUrl: "https://trueresonance.rafacmur.com/",
-    codeUrl: "https://github.com/RafaCMur/true-resonance",
-    featured: true,
-    status: "completed",
-  },
   {
     id: "vscode-theme",
     title: "VSCode Theme",
